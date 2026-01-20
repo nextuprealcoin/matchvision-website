@@ -1,0 +1,478 @@
+/* ---------------------------------------------------
+   GLOBAL RESET & BASE
+--------------------------------------------------- */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  font-family: 'Inter', sans-serif;
+  background: #050505;
+  color: #ffffff;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-size: 1.25rem;
+  line-height: 1.75;
+  letter-spacing: 0.2px;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* ---------------------------------------------------
+   TYPOGRAPHY
+--------------------------------------------------- */
+h1, h2, h3 {
+  font-weight: 700;
+  letter-spacing: -0.5px;
+}
+
+h1 {
+  font-size: 3.2rem;
+  margin-bottom: 25px;
+}
+
+h2 {
+  font-size: 2.6rem;
+  margin-bottom: 20px;
+}
+
+h3 {
+  font-size: 1.6rem;
+  margin-bottom: 12px;
+}
+
+p, .wide-text {
+  font-size: 1.25rem;
+  line-height: 1.75;
+  opacity: 0.9;
+  margin-bottom: 20px;
+}
+
+/* ---------------------------------------------------
+   LAYOUT HELPERS
+--------------------------------------------------- */
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: auto;
+}
+
+.center {
+  text-align: center;
+}
+
+.section {
+  padding: 160px 0;
+  position: relative;
+  z-index: 2;
+}
+
+/* ---------------------------------------------------
+   NAVIGATION
+--------------------------------------------------- */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 20;
+  padding: 25px 0;
+}
+
+.nav-link {
+  font-weight: 500;
+  opacity: 0.9;
+  transition: 0.3s ease;
+}
+
+.nav-link:hover {
+  opacity: 1;
+  text-shadow: 0 0 12px rgba(120,120,255,0.6);
+}
+
+/* ---------------------------------------------------
+   HERO GRADIENT
+--------------------------------------------------- */
+.gradient-hero {
+  position: relative;
+  overflow: hidden;
+  padding: 200px 0 260px;
+  background: linear-gradient(135deg, #ff1a1a, #0066ff, #ff1a1a);
+  background-size: 300% 300%;
+  animation: solanaShift 18s ease infinite;
+  border-bottom: 1px solid rgba(255,255,255,0.08);
+  z-index: 1;
+}
+
+.gradient-hero::before,
+.gradient-hero::after {
+  content: "";
+  position: absolute;
+  filter: blur(120px);
+  z-index: 0;
+}
+
+.gradient-hero::before {
+  top: -20%;
+  left: -20%;
+  width: 160%;
+  height: 160%;
+  background: radial-gradient(circle at 50% 30%, rgba(255, 60, 60, 0.35), transparent);
+}
+
+.gradient-hero::after {
+  bottom: -10%;
+  right: -10%;
+  width: 150%;
+  height: 150%;
+  background: radial-gradient(circle at 70% 80%, rgba(0, 120, 255, 0.25), transparent);
+}
+
+.hero-content {
+  position: relative;
+  z-index: 5;
+}
+
+@keyframes solanaShift {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+/* ---------------------------------------------------
+   GRADIENT SECTIONS (Unified)
+--------------------------------------------------- */
+.gradient-services,
+.gradient-intelligence,
+.gradient-contact-strong,
+.gradient-development,
+.gradient-technical-model,
+.gradient-recruiting-animated {
+  position: relative;
+  overflow: hidden;
+  background-size: 300% 300%;
+  animation: solanaShift 18s ease infinite;
+  padding: 120px 0;
+}
+
+.gradient-services {
+  background: linear-gradient(135deg, #0066ff, #ff4bd8, #0066ff);
+}
+
+.gradient-intelligence {
+  background: linear-gradient(135deg, #00e6c3, #7a3cff, #00e6c3);
+}
+
+.gradient-contact-strong {
+  background: linear-gradient(135deg, #ff8a3d, #ff1a1a, #ff8a3d);
+}
+
+.gradient-development {
+  background: linear-gradient(135deg, #ff0033, #0044ff);
+}
+
+.gradient-technical-model {
+  background: linear-gradient(135deg, rgba(0,230,195,0.6), rgba(0,102,255,0.6));
+}
+
+.gradient-recruiting-animated {
+  background: linear-gradient(135deg, #ff0033, #0066ff, #ff7b00);
+}
+
+/* Fix pointer events */
+.gradient-services,
+.gradient-development,
+.gradient-intelligence,
+.gradient-contact-strong,
+.gradient-technical-model,
+.gradient-recruiting-animated {
+  pointer-events: auto;
+}
+
+.gradient-services::before,
+.gradient-services::after,
+.gradient-development::before,
+.gradient-development::after,
+.gradient-intelligence::before,
+.gradient-intelligence::after,
+.gradient-contact-strong::before,
+.gradient-contact-strong::after,
+.gradient-technical-model::before,
+.gradient-technical-model::after,
+.gradient-recruiting-animated::before,
+.gradient-recruiting-animated::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  filter: blur(120px);
+  pointer-events: none;
+  z-index: 0;
+}
+
+/* ---------------------------------------------------
+   UNIVERSAL CARD SYSTEM (Unified)
+--------------------------------------------------- */
+.card,
+.floating-card {
+  background: rgba(255,255,255,0.05);
+  border: 1px solid rgba(255,255,255,0.12);
+  padding: 28px;
+  border-radius: 18px;
+  backdrop-filter: blur(10px);
+  box-shadow:
+    0 0 25px rgba(255,255,255,0.12),
+    0 0 45px rgba(0,0,0,0.45) inset;
+  transition: transform 0.35s ease, box-shadow 0.35s ease;
+  position: relative;
+  z-index: 5;
+}
+
+/* ---------------------------------------------------
+   UNIVERSAL HOVER — Medium Hybrid Tilt + Glow
+--------------------------------------------------- */
+.card:hover,
+.floating-card:hover {
+  transform: translateY(-10px) rotate3d(1, 1, 0, 6deg);
+  box-shadow:
+    0 0 35px rgba(0,255,200,0.35),
+    0 0 55px rgba(255,255,255,0.15),
+    0 0 65px rgba(0,0,0,0.6) inset;
+}
+
+/* ---------------------------------------------------
+   CARD GRID
+--------------------------------------------------- */
+.card-grid,
+.floating-cards-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 32px;
+  margin-top: 40px;
+}
+
+/* ---------------------------------------------------
+   BUTTONS (Clean, no tilt)
+--------------------------------------------------- */
+.primary-btn {
+  display: inline-block;
+  padding: 14px 28px;
+  border-radius: 10px;
+  font-weight: 600;
+  background: linear-gradient(135deg, #4b7bff, #6c5ce7);
+  border: 2px solid rgba(120,120,255,0.4);
+  transition: 0.3s ease;
+  position: relative;
+  z-index: 50;
+}
+
+.primary-btn:hover {
+  transform: scale(1.06);
+  box-shadow: 0 0 25px rgba(0,102,255,0.7),
+              0 0 45px rgba(255,75,216,0.5);
+}
+
+/* ---------------------------------------------------
+   RESPONSIVE
+--------------------------------------------------- */
+@media (max-width: 900px) {
+  .section {
+    padding: 120px 0;
+  }
+
+  h1 {
+    font-size: 2.6rem;
+  }
+
+  h2 {
+    font-size: 2.2rem;
+  }
+}
+
+.visual-overview {
+  padding-top: 80px;
+  padding-bottom: 80px;
+}
+
+.visual-card-stack {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  margin-top: 40px;
+}
+
+.visual-card-stack .card {
+  background: rgba(255,255,255,0.05);
+  border: 1px solid rgba(255,255,255,0.12);
+  padding: 0;
+  border-radius: 18px;
+  backdrop-filter: blur(10px);
+  box-shadow:
+    0 0 25px rgba(255,255,255,0.12),
+    0 0 45px rgba(0,0,0,0.45) inset;
+  overflow: hidden;
+  transition: transform 0.35s ease, box-shadow 0.35s ease;
+}
+
+.visual-card-stack .card:hover {
+  transform: translateY(-10px) rotate3d(1, 1, 0, 6deg);
+  box-shadow:
+    0 0 35px rgba(0,255,200,0.35),
+    0 0 55px rgba(255,255,255,0.15),
+    0 0 65px rgba(0,0,0,0.6) inset;
+}
+
+.visual-card-stack img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: 0;
+}
+
+/* Key Features Two-Column Layout */
+.key-features-layout {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+  align-items: stretch;
+  margin-top: 40px;
+}
+
+/* Left side: 2x2 card grid */
+.key-features-cards {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 28px;
+}
+
+/* Right side: large image card */
+.key-features-image {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+}
+
+.key-features-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 18px;
+}
+
+/* Mobile Responsive */
+@media (max-width: 900px) {
+  .key-features-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .key-features-image {
+    height: auto;
+  }
+}
+
+.card img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: 12px;
+  object-fit: contain;
+}
+
+/* Animated Gradient for Final CTA Section */
+.gradient-train-smarter {
+  background: linear-gradient(135deg, #ff004c, #4a00ff, #00d4ff);
+  background-size: 300% 300%;
+  animation: trainSmarterGradient 12s ease infinite;
+  padding-top: 80px;
+  padding-bottom: 80px;
+  border-radius: 0;
+}
+
+@keyframes trainSmarterGradient {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: nowrap; /* prevents wrapping */
+  white-space: nowrap; /* forces one-line layout */
+  gap: 20px;
+}
+
+.navbar .nav-link {
+  white-space: nowrap; /* prevents individual links from wrapping */
+}
+
+.navbar > div {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  flex-wrap: nowrap;
+}
+
+.navbar-brand {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  white-space: nowrap;
+}
+
+.navbar-menu {
+  display: flex;
+  gap: 24px;
+  align-items: center;
+  white-space: nowrap;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 0;
+  width: 100%;
+  flex-wrap: nowrap;
+}
+
+.navbar-brand {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  white-space: nowrap;
+  flex-shrink: 0; /* prevents it from shrinking into the menu */
+}
+
+.navbar-menu {
+  display: flex;
+  gap: 24px;
+  align-items: center;
+  white-space: nowrap;
+  flex-shrink: 1;
+}
+
+.nav-link {
+  white-space: nowrap;
+}
+
+.navbar-menu {
+  margin-left: auto;
+}
+
