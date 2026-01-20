@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Training Sessions | Futbol IQ Academy</title>
+  <link rel="stylesheet" href="styles.css" />
+
+  <style>
+    @keyframes headerGradientShift {
+      0% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
+    }
+
+    .edge-card {
+      width: 100%;
+      padding: 40px 30px;
+      margin: 30px 0;
+      border-radius: 18px;
+      background: rgba(255,255,255,0.05);
+      border: 1px solid rgba(255,255,255,0.12);
+      backdrop-filter: blur(10px);
+      box-shadow:
+        0 0 25px rgba(255,255,255,0.12),
+        0 0 45px rgba(0,0,0,0.45) inset;
+      transition: transform .35s ease, box-shadow .35s ease;
+    }
+
+    .edge-card:hover {
+      transform: translateY(-6px);
+      box-shadow:
+        0 0 35px rgba(255,255,255,0.18),
+        0 0 65px rgba(0,0,0,0.55) inset;
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- ================= STREAMLINED NAVIGATION ================= -->
+  <nav class="navbar container" style="
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:20px 0;
+    gap:20px;
+    white-space:nowrap;
+  ">
+
+    <!-- Logo + Title -->
+    <div style="
+      display:flex;
+      align-items:center;
+      gap:14px;
+      flex-shrink:0;
+      white-space:nowrap;
+    ">
+      <img src="assets/images/futbol-iq-logo.png" style="height:55px; width:auto;" />
+      <h3 style="margin:0; font-size:1.5rem; font-weight:700;">
+        Futbol <span style="color:#ff0000;">IQ</span> Academy
+      </h3>
+    </div>
+
+    <!-- Menu -->
+    <div style="
+      display:flex;
+      gap:24px;
+      align-items:center;
+      flex-shrink:1;
+      white-space:nowrap;
+    ">
+      <a class="nav-link" href="index.html#intelligence">Player Intelligence</a>
+      <a class="nav-link" href="player-development.html">Player Development</a>
+      <a class="nav-link" href="training-sessions.html">Training Sessions</a>
+      <a class="nav-link" href="college-recruiting.html">College Recruiting</a>
+      <a class="nav-link" href="index.html#pricing">Match Analysis</a>
+      <a class="nav-link" href="index.html#contact">Contact</a>
+    </div>
+
+  </nav>
+
+  <!-- ================= HERO SECTION ================= -->
+  <section class="section" style="padding:0; margin:0; position:relative; overflow:hidden;">
+    
+    <div style="
+      width:100%;
+      height:600px;
+      background-image:url('assets/images/futbol-iq-soccerteam-training.png');
+      background-size:cover;
+      background-position:center -40px;
+      background-repeat:no-repeat;
+    "></div>
+
+    <div style="
+      position:absolute;
+      top:0;
+      left:0;
+      width:100%;
+      height:600px;
+      pointer-events:none;
+      background:linear-gradient(
+        120deg,
+        rgba(255,0,60,0.18),
+        rgba(0,120,255,0.18),
+        rgba(255,140,0,0.18)
+      );
+      background-size:300% 300%;
+      animation: headerGradientShift 12s ease-in-out infinite;
+    "></div>
+
+    <div class="container center" style="
+      position:absolute;
+      top:50%;
+      left:50%;
+      transform:translate(-50%,-50%);
+      color:white;
+      text-align:center;
+    ">
+      <h1 style="font-size:3.2rem; font-weight:800; margin-bottom:10px;">
+        Training Sessions
+      </h1>
+      <p style="font-size:1.3rem; opacity:0.85;">
+        Elite sessions designed for intelligent, modern players
+      </p>
+    </div>
+
+  </section>
+
+  <!-- ================= ELITE TRAINING OVERVIEW ================= -->
+  <section class="section solana-divider-dark section-transition-bottom">
+    <div class="container" style="max-width:900px;">
+
+      <h2 class="center" style="font-size:2.6rem; margin-bottom:25px;">
+        What Elite-Level Training Really Means
+      </h2>
+
+      <p class="wide-text" style="opacity:0.9; margin-bottom:20px;">
+        Elite-level training isn’t defined by flashy equipment, endless cones, or perfectly staged drills. At its core, elite training is a 
+        high-performance environment built on clarity, intentionality, and standards that mirror the demands of the modern game. Research 
+        across player development models — from UEFA academies to NCAA performance programs — consistently shows that the most impactful 
+        environments share three traits:
+      </p>
+
+      <!-- EDGE-TO-EDGE CARDS FOR #1–#3 -->
+      <div class="edge-card">
+        <h3>1. Purpose Over Props</h3>
+        <p class="wide-text" style="opacity:0.9;">
+          The best training environments aren’t the ones with the most gear — they’re the ones with the most intention. Studies in motor 
+          learning and skill acquisition show that players improve fastest when every activity has a clear objective, measurable outcomes, 
+          and immediate feedback loops.
+        </p>
+      </div>
+
+      <div class="edge-card">
+        <h3>2. Game-Realistic Demands</h3>
+        <p class="wide-text" style="opacity:0.9;">
+          Top academies design sessions that replicate the cognitive and physical demands of real match play — constant scanning, pressure 
+          from multiple directions, time constraints, space constraints, tactical cues, and real consequences for decisions.
+        </p>
+      </div>
+
+      <div class="edge-card">
+        <h3>3. Standards That Shape Behavior</h3>
+        <p class="wide-text" style="opacity:0.9;">
+          Elite environments are defined by the expectations placed on players. Not perfection — but perfect permanence: the ability to 
+          execute the right habits consistently, even under fatigue, stress, or chaos.
+        </p>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ================= HOW TO RECOGNIZE ELITE ENVIRONMENT ================= -->
+  <section class="section gradient-technical-model section-transition-bottom">
+    <div class="container center">
+
+      <h2>How to Recognize an Elite Training Environment</h2>
+
+      <div class="floating-cards-grid" style="margin-top:40px;">
+
+        <div class="floating-card">
+          <h3>Clear Standards</h3>
+          <p>Players know exactly what is expected — technically, tactically, and behaviorally.</p>
+        </div>
+
+        <div class="floating-card">
+          <h3>Purposeful Flow</h3>
+          <p>Sessions connect logically, with every activity tied to the game model.</p>
+        </div>
+
+        <div class="floating-card">
+          <h3>Engaged Minds</h3>
+          <p>Players are mentally active, not just physically busy — mistakes become information.</p>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ================= BENEFITS OF ELITE TRAINING ================= -->
+  <section class="section solana-divider-dark section-transition-bottom">
+    <div class="container center">
+
+      <h2>The Benefits of Training in an Elite Environment</h2>
+
+      <div class="floating-cards-grid" style="margin-top:40px;">
+
+        <div class="floating-card">
+          <h3>Faster Decisions</h3>
+          <p>Players develop perceptual-cognitive speed — reading the game quicker.</p>
+        </div>
+
+        <div class="floating-card">
+          <h3>Higher Execution</h3>
+          <p>Technical actions improve under pressure, fatigue, and tight spaces.</p>
+        </div>
+
+        <div class="floating-card">
+          <h3>Greater Adaptability</h3>
+          <p>Players become more versatile, confident, and tactically intelligent.</p>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ================= FIQA TRAINING PHILOSOPHY ================= -->
+  <section class="section gradient-recruiting-animated section-transition-bottom">
+    <div class="container center">
+      <h2>FIQA Training Philosophy</h2>
+
+      <div class="floating-cards-grid" style="margin-top:40px;">
+        <div class="floating-card">
+          <h3>Intelligent Training</h3>
+          <p>Every session challenges decision-making, awareness, and game intelligence.</p>
+        </div>
+
+        <div class="floating-card">
+          <h3>Game-Realistic Design</h3>
+          <p>We replicate match conditions to ensure every drill translates directly to performance.</p>
+        </div>
+
+        <div class="floating-card">
+          <h3>Cognitive + Technical Integration</h3>
+          <p>Players train both brain and body — scanning, reacting, and executing under pressure.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= SESSION CATEGORIES ================= -->
+  <section class="section solana-divider-dark section-transition-bottom">
+    <div class="container center">
+      <h2>Session Categories</h2>
+
+      <div class="recruiting-grid">
+
+        <div class="recruiting-card"><div class="icon">🔥</div><h3>Warm-Ups</h3><p>Dynamic prep for body and mind.</p></div>
+        <div class="recruiting-card"><div class="icon">⚽</div><h3>Technical Drills</h3><p>Ball mastery and repetition with purpose.</p></div>
+        <div class="recruiting-card"><div class="icon">🎯</div><h3>Tactical Phases</h3><p>Shape, movement, and decision-making.</p></div>
+        <div class="recruiting-card"><div class="icon">🧠</div><h3>Cognitive Training</h3><p>Train scanning, awareness, and reaction speed.</p></div>
+        <div class="recruiting-card"><div class="icon">📍</div><h3>Position-Specific</h3><p>Tailored sessions for each role on the pitch.</p></div>
+        <div class="recruiting-card"><div class="icon">👀</div><h3>Scanning & Awareness</h3><p>Improve vision and anticipation.</p></div>
+        <div class="recruiting-card"><div class="icon">🛡️</div><h3>Pressing & Defending</h3><p>Compactness, timing, and recovery.</p></div>
+        <div class="recruiting-card"><div class="icon">🎯</div><h3>Finishing</h3><p>Composure, technique, and repetition.</p></div>
+        <div class="recruiting-card"><div class="icon">🎮</div><h3>Small-Sided Games</h3><p>High reps, tight spaces, fast decisions.</p></div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= FEATURED FULL SESSIONS ================= -->
+  <section class="section gradient-recruiting-animated section-transition-bottom">
+    <div class="container center">
+      <h2>Featured Full Sessions</h2>
+
+      <div class="floating-cards-grid" style="margin-top:40px;">
+
+        <div class="floating-card">
+          <h3>FIQA Cognitive Warm-Up</h3>
+          <p>Activate scanning, reaction, and coordination in the first 10 minutes of training.</p>
+        </div>
+
+        <div class="floating-card">
+          <h3>FIQA Positional Play Rondo</h3>
+          <p>Train shape, angles, and decision-making in tight spaces with directional rondos.</p>
+        </div>
+
+        <div class="floating-card">
+          <h3>FIQA Finishing Under Pressure</h3>
+          <p>Rep finishing actions with defenders closing space and time constraints.</p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= CTA SECTION ================= -->
+  <section class="section solana-divider-dark section-transition-bottom">
+    <div class="container center">
+      <h2>Train Smarter. Train with Purpose.</h2>
+
+      <p class="wide-text" style="max-width:700px; margin:auto;">
+        Every session at Futbol IQ Academy is built to elevate your game — technically, tactically, and cognitively. Explore our Player 
+        Development hub or book a session today.
+      </p>
+
+      <div style="margin-top:30px;">
+        <a href="player-development.html" class="button">Explore Player Development</a>
+        <a href="index.html#contact" class="button ghost">Book a Session</a>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    © 2026 Futbol IQ Academy. All rights reserved.
+  </footer>
+
+</body>
+</html>

@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>College Recruiting | Futbol IQ Academy</title>
+  <link rel="stylesheet" href="styles.css" />
+
+  <style>
+    @keyframes headerGradientShift {
+      0% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- ================= NAVIGATION ================= -->
+  <nav class="navbar container">
+    <div class="logo-container">
+      <img src="assets/images/futbol-iq-logo.png" class="logo" />
+      <h3>Futbol <span style="color:#ff0000;">IQ</span> Academy</h3>
+    </div>
+
+    <div class="nav-links desktop-only">
+      <a class="nav-link" href="index.html#intelligence">Player Intelligence</a>
+      <a class="nav-link" href="player-development.html">Player Development</a>
+      <a class="nav-link" href="index.html#pricing">Match Analysis</a>
+      <a class="nav-link" href="index.html#contact">Contact</a>
+    </div>
+
+    <button class="mobile-menu-btn mobile-only">☰</button>
+  </nav>
+
+  <!-- ================= HERO ================= -->
+  <header class="hero gradient-hero section-transition-bottom">
+    <div class="container hero-content center fade-in">
+      <h1 class="hero-main-headline">College Recruiting</h1>
+      <p class="hero-subline">Data‑Driven Guidance for the Next Level</p>
+    </div>
+  </header>
+
+  <!-- ================= FULL-WIDTH HEADER IMAGE WITH ANIMATED GRADIENT ================= -->
+<section class="section" style="padding:0; margin:0; position:relative; overflow:hidden;">
+  
+  <!-- Background Image (Corrected Crop) -->
+  <div style="
+    width:100%;
+    height:600px; /* expanded height to reveal elbows */
+    background-image:url('assets/images/futbol-iq-confidentplayers.png');
+    background-size:cover;
+    background-position:center -40px; /* adjust up/down as needed */
+    background-repeat:no-repeat;
+  ">
+  </div>
+
+  <!-- Animated Gradient Overlay -->
+  <div style="
+    position:absolute;
+    top:0;
+    left:0;
+    width:100%;
+    height:600px;
+    pointer-events:none;
+    background:linear-gradient(
+      120deg,
+      rgba(255,0,60,0.18),
+      rgba(0,120,255,0.18),
+      rgba(255,140,0,0.18)
+    );
+    background-size:300% 300%;
+    animation: headerGradientShift 12s ease-in-out infinite;
+  ">
+  </div>
+
+</section>
+
+  <!-- ================= OVERVIEW SECTION ================= -->
+  <section class="section solana-divider-dark section-transition-bottom">
+
+    <!-- FULL-WIDTH TITLE -->
+    <div class="container center" style="margin-bottom:40px;">
+      <h2 style="
+        font-size:3rem;
+        font-weight:800;
+        letter-spacing:-1px;
+        margin-bottom:10px;
+        text-align:center;
+      ">
+        Understanding the College Soccer Landscape
+      </h2>
+    </div>
+
+    <!-- TWO-COLUMN CONTENT -->
+    <div class="container" style="display:flex; flex-wrap:wrap; gap:50px; align-items:center;">
+
+      <!-- OVERVIEW CARD -->
+      <div style="flex:1 1 480px; min-width:300px;">
+        <div style="
+          background:rgba(255,255,255,0.05);
+          border:1px solid rgba(255,255,255,0.12);
+          padding:28px;
+          border-radius:16px;
+          backdrop-filter:blur(10px);
+          box-shadow:
+            0 0 25px rgba(255,255,255,0.12),
+            0 0 45px rgba(0,0,0,0.45) inset;
+        ">
+          <h3 style="font-size:1.6rem; margin-bottom:15px; font-weight:700;">
+            A Smarter Way to Navigate College Recruiting
+          </h3>
+
+          <p class="wide-text" style="opacity:0.9; margin-bottom:15px;">
+            The college recruiting process is more competitive than ever. With thousands of high school players pursuing limited roster 
+            spots, families need clarity, strategy, and accurate data to navigate the journey. Our approach blends real recruiting 
+            analytics, NCAA trends, and personalized guidance to help players position themselves for success.
+          </p>
+
+          <p class="wide-text" style="opacity:0.9;">
+            Over the past five years, the gap between potential college soccer players and those who actually secure roster spots has 
+            widened. Understanding where you stand — and how to stand out — is essential. This page gives you the tools, insights, and 
+            structure to do exactly that.
+          </p>
+        </div>
+      </div>
+
+      <!-- IMAGE CARD -->
+      <div style="flex:1 1 480px; min-width:300px; display:flex; justify-content:center;">
+        <div style="
+          background:rgba(255,255,255,0.05);
+          border:1px solid rgba(255,255,255,0.12);
+          padding:20px;
+          border-radius:16px;
+          backdrop-filter:blur(8px);
+          box-shadow:0 0 45px rgba(255,255,255,0.15), 0 0 65px rgba(0,0,0,0.6) inset;
+          max-width:550px;
+        ">
+          <img 
+            src="assets/images/futbol-iq-college.png"
+            alt="College Recruiting Overview"
+            style="width:100%; border-radius:12px;"
+          />
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ================= PIE CHART SECTION ================= -->
+  <section class="section gradient-technical-model section-transition-bottom">
+    <div class="container center">
+      <h2>College Soccer Pathway Breakdown</h2>
+      <p class="wide-text" style="max-width:800px; margin:auto;">
+        A five‑year snapshot of the college soccer pipeline — from total potential players to those who earn athletic scholarships.
+      </p>
+
+      <div style="margin-top:50px; max-width:700px; margin-left:auto; margin-right:auto;">
+        <canvas id="collegePieChart" style="height:420px;"></canvas>
+      </div>
+
+      <p class="wide-text" style="opacity:0.75; margin-top:20px; text-align:center;">
+        <strong>Data Categories:</strong> Potential College Players • Applicants • Accepted & Playing • Scholarship Athletes
+      </p>
+    </div>
+  </section>
+
+  <!-- ================= WHY PLAYERS STRUGGLE TO REACH NEXT LEVEL ================= -->
+  <section class="section solana-divider-dark section-transition-bottom">
+    <div class="container" style="max-width:1100px;">
+
+      <h2 class="center" style="font-size:2.3rem; margin-bottom:25px;">
+        Why So Many Players Never Reach College or Professional Levels
+      </h2>
+
+      <p class="wide-text" style="font-size:1.15rem; opacity:0.9; max-width:900px; margin:auto;">
+        Despite years of training, competition, and commitment, the majority of youth players never transition into college or 
+        professional soccer. The issue isn’t talent — it’s the lack of a structured pathway, strategic guidance, and understanding 
+        of the hidden layers of development and recruiting. Without clarity, families make decisions too late, players train the 
+        wrong areas, and coaches lack the bandwidth to guide every individual. The result is predictable: frustration, burnout, 
+        and missed opportunities.
+      </p>
+
+      <div class="floating-cards-grid" style="margin-top:50px;">
+
+        <div class="floating-card">
+          <h3>Late Understanding of the Recruiting Timeline</h3>
+          <p>Most families don’t realize the process starts years before they expect — often by freshman year.</p>
+        </div>
+
+        <div class="floating-card">
+          <h3>Lack of Tactical & Cognitive Development</h3>
+          <p>Players train technically but rarely develop the decision‑making and intelligence college coaches prioritize.</p>
+        </div>
+
+        <div class="floating-card">
+          <h3>Poor Highlight Video Structure</h3>
+          <p>Most highlight videos fail to show real value, leading coaches to skip over talented players.</p>
+        </div>
+
+        <div class="floating-card">
+          <h3>No Strategy for Coach Communication</h3>
+          <p>Players don’t know what to say, when to say it, or how to stand out in a crowded inbox.</p>
+        </div>
+
+        <div class="floating-card">
+          <h3>Unclear Program Fit</h3>
+          <p>Families chase big‑name schools instead of identifying the right athletic, academic, and cultural fit.</p>
+        </div>
+
+        <div class="floating-card">
+          <h3>Zero Guidance on Scholarship Pathways</h3>
+          <p>Most players don’t understand scholarship tiers, negotiations, or how limited athletic money truly is.</p>
+        </div>
+
+      </div>
+
+      <p class="wide-text center" style="margin-top:40px; max-width:900px; margin:auto; opacity:0.9;">
+        Futbol IQ Academy was built to solve these problems. We provide a modern, data‑driven system that gives players, parents, 
+        and coaches the clarity they’ve never had — replacing guesswork with a proven pathway.
+      </p>
+
+    </div>
+  </section>
+
+  <!-- ================= FEATURED RECRUITING MODULES (ANIMATED GRADIENT) ================= -->
+  <section class="section gradient-recruiting-animated section-transition-bottom">
+    <div class="container center">
+      <h2>Featured Recruiting Modules</h2>
+      <p class="wide-text" style="max-width:800px; margin:auto;">
+        Explore structured, data-driven modules designed to help players navigate the recruiting process with clarity and confidence.
+      </p>
+
+      <div class="recruiting-grid">
+
+        <div class="recruiting-card">
+          <div class="icon">📅</div>
+          <h3>Recruiting Timeline</h3>
+          <p>Understand key milestones from freshman year to signing day.</p>
+        </div>
+
+        <div class="recruiting-card">
+          <div class="icon">🎥</div>
+          <h3>Highlight Video Strategy</h3>
+          <p>Create a standout highlight reel that captures coaches’ attention.</p>
+        </div>
+
+        <div class="recruiting-card">
+          <div class="icon">✉️</div>
+          <h3>Coach Communication Templates</h3>
+          <p>Use proven email scripts and messaging frameworks to reach coaches.</p>
+        </div>
+
+        <div class="recruiting-card">
+          <div class="icon">📊</div>
+          <h3>Academic Positioning</h3>
+          <p>Learn how GPA, test scores, and transcripts impact recruiting.</p>
+        </div>
+
+        <div class="recruiting-card">
+          <div class="icon">🧭</div>
+          <h3>Program Fit Analysis</h3>
+          <p>Identify the right athletic, academic, and cultural fit for your goals.</p>
+        </div>
+
+        <div class="recruiting-card">
+          <div class="icon">💼</div>
+          <h3>Scholarship Strategy</h3>
+          <p>Understand scholarship tiers, negotiations, and financial planning.</p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= VIDEO CARD SECTION ================= -->
+  <section class="section solana-divider-dark section-transition-bottom">
+    <div class="container center">
+
+      <div style="
+        background:rgba(255,255,255,0.05);
+        border:1px solid rgba(255,255,255,0.12);
+        padding:25px;
+        border-radius:18px;
+        backdrop-filter:blur(10px);
+        box-shadow:
+          0 0 45px rgba(255,255,255,0.15),
+          0 0 65px rgba(0,0,0,0.6) inset,
+          0 0 25px rgba(0,255,200,0.35);
+        max-width:900px;
+        margin:auto;
+      ">
+        <video 
+          src="assets/images/futbol-iq-socialmediabranding.mp4"
+          controls
+          style="width:100%; border-radius:12px;"
+        ></video>
+
+        <p style="margin-top:15px; opacity:0.8;">
+          Social Media Branding for College Recruiting — Full Guide Coming Soon
+        </p>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ================= FOOTER ================= -->
+  <footer class="footer">
+    © 2026 Futbol IQ Academy. All rights reserved.
+  </footer>
+
+  <!-- ================= SCRIPTS ================= -->
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script src="chart.js"></script>
+
+</body>
+</html>

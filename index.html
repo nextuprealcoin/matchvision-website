@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Futbol IQ Academy | Elite Data-Driven Soccer Intelligence</title>
+
+  <meta name="description" content="Elite soccer match analysis and player intelligence metrics. We transform match film into actionable development plans for players, parents, coaches, and teams." />
+
+  <link rel="canonical" href="https://www.futboliqacademy.com/" />
+
+  <!-- OpenGraph -->
+  <meta property="og:title" content="Futbol IQ Academy | Data-Driven Soccer Intelligence" />
+  <meta property="og:description" content="Professional match analysis, player intelligence metrics, and data-backed development systems trusted by players, parents, and coaches." />
+  <meta property="og:image" content="https://www.futboliqacademy.com/assets/images/analytics-dashboard.webp" />
+  <meta property="og:url" content="https://www.futboliqacademy.com/" />
+  <meta property="og:type" content="website" />
+
+  <link rel="stylesheet" href="styles.css" />
+</head>
+
+<body>
+
+  <!-- ================= NAVIGATION ================= -->
+  <nav class="navbar container">
+    <div class="logo-container">
+      <img src="futbol-iq-logo.png" alt="Futbol IQ Academy Logo" class="logo" />
+      <h3>Futbol <span style="color:#ff0000;">IQ</span> Academy</h3>
+    </div>
+
+    <div class="desktop-only nav-links">
+      <a href="#intelligence" class="nav-link">Player Intelligence</a>
+      <a href="#pricing" class="nav-link">Match Analysis</a>
+      <a href="#contact" class="nav-link">Contact</a>
+    </div>
+
+    <button class="mobile-only mobile-menu-btn">☰</button>
+  </nav>
+
+  <!-- ================= HERO ================= -->
+  <header class="hero gradient-hero section-transition-bottom">
+    <div class="container hero-content center">
+
+      <p class="hero-topline">
+        Turning Match Film Into Competitive Intelligence
+      </p>
+
+      <h1 class="hero-main-headline">
+        Elite Data‑Driven Soccer Analysis
+      </h1>
+
+      <p class="hero-subline">
+        We quantify decision‑making, awareness, and tactical execution — the true separators as competition increases.
+      </p>
+
+      <div class="hero-buttons">
+        <a href="#intelligence" class="primary-btn">Player Metrics</a>
+        <a href="#pricing" class="secondary-btn">Match Analysis</a>
+      </div>
+
+    </div>
+  </header>
+
+  <!-- ================= WHAT WE DO ================= -->
+  <section id="what-we-do" class="section solana-divider section-transition-bottom">
+    <div class="container split-layout">
+
+      <div class="text-block">
+        <h2>What We Do</h2>
+        <p class="wide-text">
+          Futbol IQ Academy delivers professional-grade match intelligence built on
+          data, decision science, and real-game context. We analyze how players
+          perceive space, process information, manage risk, and execute decisions
+          under real match pressure.
+        </p>
+        <p class="wide-text">
+          Our proprietary system combines detailed video breakdown, situational
+          tagging, and cognitive performance metrics to identify patterns that
+          traditional analysis methods miss. The result is actionable insight that
+          accelerates development and directly translates to on-field performance.
+        </p>
+      </div>
+
+      <div class="visual-block">
+        <img
+          src="assets/images/heatmap-analyst.jpeg"
+          alt="Heatmap-Based Match Analysis"
+          style="position:relative; z-index:3;"
+        />
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ================= WHY NOW ================= -->
+  <section id="why-now" class="section solana-divider-dark section-transition-bottom">
+    <div class="container split-layout reverse">
+
+      <div class="visual-block">
+        <img
+          src="assets/images/tactical-formation.jpeg"
+          alt="Modern Tactical Structures and Team Shape"
+          style="position:relative; z-index:3;"
+        />
+      </div>
+
+      <div class="text-block">
+        <h2>Why This Matters Now</h2>
+        <p class="wide-text">
+          The modern soccer landscape is saturated. Many players invest heavily in
+          private training without a clear, data-backed understanding of what they
+          actually need to improve.
+        </p>
+        <p class="wide-text">
+          Futbol IQ Academy solves this problem by turning match performance into
+          actionable intelligence. We identify decision patterns, tactical gaps,
+          and cognitive inefficiencies, then translate them into targeted training
+          priorities and development recommendations.
+        </p>
+        <p class="wide-text">
+          This ensures training time is purposeful, measurable, and aligned with
+          how the modern game is evaluated at collegiate and professional levels.
+        </p>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ================= PLAYER INTELLIGENCE METRICS ================= -->
+  <section id="intelligence" class="section gradient-intelligence section-transition-blend">
+    <div class="container">
+      <h2>Player Intelligence Metrics</h2>
+
+      <p class="wide-text">
+        Player intelligence metrics quantify how players think during competition —
+        not just what actions they perform. We measure scanning behavior, decision
+        speed, risk selection, spatial awareness, and tactical execution in real
+        match contexts.
+      </p>
+
+      <p class="wide-text">
+        These metrics allow us to diagnose inefficiencies, track development over
+        time, and prescribe targeted training interventions that directly improve
+        match impact and long-term adaptability.
+      </p>
+
+      <div class="chart-grid">
+        <div class="chart-card">
+          <h3>Decision-Making Profile</h3>
+          <canvas id="decisionChart"></canvas>
+        </div>
+
+        <div class="chart-card">
+          <h3>Spatial & Game Awareness</h3>
+          <canvas id="awarenessChart"></canvas>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= PLAYER DEVELOPMENT HUB (4×2 GRID) ================= -->
+  <section id="development" class="section solana-divider-dark section-transition-bottom">
+    <div class="container split-layout">
+
+      <div class="development-content">
+        <h2>Player Development Hub</h2>
+
+        <p class="wide-text">
+          The Player Development Hub transforms intelligence metrics and match
+          analysis into structured learning pathways. Each area reinforces
+          decision-making, tactical understanding, and long-term player growth.
+        </p>
+
+        <div class="grid-2" style="margin-top:30px;">
+          <a href="tactical-understanding.html" class="card glow-card">Tactical Understanding</a>
+          <a href="technical-development.html" class="card glow-card">Technical Development</a>
+          <a href="decision-making.html" class="card glow-card">Decision-Making</a>
+          <a href="position-guides.html" class="card glow-card">Position-Specific Guides</a>
+          <a href="mental-performance.html" class="card glow-card">Mental Performance</a>
+          <a href="college-recruiting.html" class="card glow-card">College Recruiting</a>
+          <a href="training-sessions.html" class="card glow-card">Training Sessions</a>
+          <a href="video-learning.html" class="card glow-card">Video Learning</a>
+        </div>
+
+        <div class="hub-cta center" style="margin-top:40px;">
+          <a href="player-development.html" class="primary-btn">
+            Explore the Full Development Hub
+          </a>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ================= MATCH ANALYSIS SERVICES ================= -->
+  <section id="pricing" class="section gradient-services section-transition-blend">
+    <div class="container split-layout reverse">
+
+      <div class="visual-block">
+        <img
+          src="assets/images/match-summary.jpeg"
+          alt="Team Match Summary and Tactical Evaluation"
+          style="position:relative; z-index:3;"
+        />
+      </div>
+
+      <div class="text-block">
+        <h2>Match Analysis Services</h2>
+
+        <p class="wide-text">
+          Our services scale from individual player development to full team tactical
+          evaluation, providing clear insight at every level of the game.
+        </p>
+
+        <div class="card-grid">
+
+          <div class="card">
+            <h3>Standard Breakdown</h3>
+            <a href="standard-analysis.html" class="primary-btn">Learn More</a>
+          </div>
+
+          <div class="card">
+            <h3>Advanced Analysis</h3>
+            <a href="advanced-analysis.html" class="primary-btn">Learn More</a>
+          </div>
+
+          <div class="card">
+            <h3>Team Match Analysis</h3>
+            <a href="team-analysis.html" class="primary-btn">Learn More</a>
+          </div>
+
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ================= FAQ ================= -->
+  <section id="faq" class="section solana-divider-dark section-transition-bottom">
+    <div class="container">
+      <h2>Frequently Asked Questions</h2>
+
+      <div class="faq-grid">
+        <div class="faq-item">
+          <h3>What makes Futbol IQ Academy different from traditional match analysis?</h3>
+          <p>
+            Traditional analysis focuses on isolated actions and surface-level
+            statistics. Futbol IQ Academy evaluates how players perceive space,
+            process information, and make decisions under real match pressure using
+            intelligence-based metrics.
+          </p>
+        </div>
+
+        <div class="faq-item">
+          <h3>How do player intelligence metrics improve development?</h3>
+          <p>
+            Intelligence metrics allow us to identify inefficiencies in scanning,
+            decision speed, risk management, and spatial awareness. These insights
+            translate directly into targeted training recommendations that improve
+            match performance.
+          </p>
+        </div>
+
+        <div class="faq-item">
+          <h3>Is this useful if a player already does private training?</h3>
+          <p>
+            Yes. Many players train frequently without clear direction. Our analysis
+            ensures training is purposeful by aligning technical and tactical work
+            with actual match demands and developmental priorities.
+          </p>
+        </div>
+
+        <div class="faq-item">
+          <h3>How do I get started?</h3>
+          <p>
+            Start with an individual match breakdown or advanced analysis. From
+            there, we guide players toward structured development pathways based on
+            measurable performance data.
+          </p>
+          <a href="#pricing" class="secondary-btn">View Analysis Services</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= CONTACT (RESTORED LAYOUT) ================= -->
+  <section id="contact" class="section gradient-contact-strong section-transition-blend">
+    <div class="container" style="max-width:700px; text-align:center;">
+      <h2>Contact</h2>
+
+      <p class="wide-text">
+        Interested in working together? Contact us to discuss player development,
+        team analysis, or organizational partnerships.
+      </p>
+
+      <form action="https://formspree.io/f/yourformid" method="POST" style="max-width:600px; margin:40px auto 0 auto;">
+        <input type="text" name="name" placeholder="Name" required />
+        <input type="email" name="email" placeholder="Email" required />
+        <textarea name="message" placeholder="Message" required></textarea>
+        <button type="submit" class="primary-btn" style="margin-top:20px;">Send</button>
+      </form>
+    </div>
+  </section>
+
+  <footer class="footer">
+    © 2026 Futbol IQ Academy. All rights reserved.
+  </footer>
+
+  <!-- ================= SCRIPTS ================= -->
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script src="chart.js"></script>
+
+</body>
+</html>
