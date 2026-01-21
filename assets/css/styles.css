@@ -80,6 +80,35 @@ p, .wide-text {
 }
 
 /* ---------------------------------------------------
+   SPLIT LAYOUT (Fix for image/text sections)
+--------------------------------------------------- */
+.split-layout {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 60px;
+  align-items: center;
+  justify-content: space-between;
+}
+
+@media (max-width: 900px) {
+  .split-layout {
+    flex-direction: column;
+    gap: 40px;
+  }
+}
+
+/* ---------------------------------------------------
+   VISUAL BLOCK IMAGE FIX
+--------------------------------------------------- */
+.visual-block img {
+  display: block;
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+  border-radius: 12px;
+}
+
+/* ---------------------------------------------------
    NAVIGATION
 --------------------------------------------------- */
 .navbar {
@@ -226,7 +255,7 @@ p, .wide-text {
 }
 
 /* ---------------------------------------------------
-   CARD GRID
+   CARD GRID + PLAYER DEVELOPMENT HUB FIX
 --------------------------------------------------- */
 .card-grid,
 .floating-cards-grid,
