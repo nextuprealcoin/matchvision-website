@@ -86,18 +86,32 @@ p, .wide-text {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  z-index: 20;
   padding: 25px 0;
+  width: 100%;
+  flex-wrap: nowrap;
+}
+
+.navbar-brand {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+
+.navbar-menu {
+  display: flex;
+  gap: 24px;
+  align-items: center;
+  white-space: nowrap;
+  margin-left: auto;
 }
 
 .nav-link {
   font-weight: 500;
   opacity: 0.9;
   transition: 0.3s ease;
+  white-space: nowrap;
 }
 
 .nav-link:hover {
@@ -155,14 +169,12 @@ p, .wide-text {
 }
 
 /* ---------------------------------------------------
-   GRADIENT SECTIONS (Unified)
+   GRADIENT SECTIONS
 --------------------------------------------------- */
 .gradient-services,
 .gradient-intelligence,
 .gradient-contact-strong,
-.gradient-development,
-.gradient-technical-model,
-.gradient-recruiting-animated {
+.gradient-development {
   position: relative;
   overflow: hidden;
   background-size: 300% 300%;
@@ -186,46 +198,8 @@ p, .wide-text {
   background: linear-gradient(135deg, #ff0033, #0044ff);
 }
 
-.gradient-technical-model {
-  background: linear-gradient(135deg, rgba(0,230,195,0.6), rgba(0,102,255,0.6));
-}
-
-.gradient-recruiting-animated {
-  background: linear-gradient(135deg, #ff0033, #0066ff, #ff7b00);
-}
-
-/* Fix pointer events */
-.gradient-services,
-.gradient-development,
-.gradient-intelligence,
-.gradient-contact-strong,
-.gradient-technical-model,
-.gradient-recruiting-animated {
-  pointer-events: auto;
-}
-
-.gradient-services::before,
-.gradient-services::after,
-.gradient-development::before,
-.gradient-development::after,
-.gradient-intelligence::before,
-.gradient-intelligence::after,
-.gradient-contact-strong::before,
-.gradient-contact-strong::after,
-.gradient-technical-model::before,
-.gradient-technical-model::after,
-.gradient-recruiting-animated::before,
-.gradient-recruiting-animated::after {
-  content: "";
-  position: absolute;
-  inset: 0;
-  filter: blur(120px);
-  pointer-events: none;
-  z-index: 0;
-}
-
 /* ---------------------------------------------------
-   UNIVERSAL CARD SYSTEM (Unified)
+   UNIVERSAL CARD SYSTEM
 --------------------------------------------------- */
 .card,
 .floating-card {
@@ -242,9 +216,6 @@ p, .wide-text {
   z-index: 5;
 }
 
-/* ---------------------------------------------------
-   UNIVERSAL HOVER — Medium Hybrid Tilt + Glow
---------------------------------------------------- */
 .card:hover,
 .floating-card:hover {
   transform: translateY(-10px) rotate3d(1, 1, 0, 6deg);
@@ -258,7 +229,8 @@ p, .wide-text {
    CARD GRID
 --------------------------------------------------- */
 .card-grid,
-.floating-cards-grid {
+.floating-cards-grid,
+.grid-2 {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
   gap: 32px;
@@ -266,7 +238,7 @@ p, .wide-text {
 }
 
 /* ---------------------------------------------------
-   BUTTONS (Clean, no tilt)
+   BUTTONS
 --------------------------------------------------- */
 .primary-btn {
   display: inline-block;
@@ -287,6 +259,26 @@ p, .wide-text {
 }
 
 /* ---------------------------------------------------
+   CONTACT FORM
+--------------------------------------------------- */
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  padding: 16px;
+  margin-bottom: 20px;
+  border-radius: 10px;
+  border: 1px solid rgba(255,255,255,0.25);
+  background: rgba(255,255,255,0.05);
+  color: #fff;
+  font-size: 1.1rem;
+}
+
+.contact-form textarea {
+  min-height: 160px;
+  resize: vertical;
+}
+
+/* ---------------------------------------------------
    RESPONSIVE
 --------------------------------------------------- */
 @media (max-width: 900px) {
@@ -301,178 +293,8 @@ p, .wide-text {
   h2 {
     font-size: 2.2rem;
   }
-}
 
-.visual-overview {
-  padding-top: 80px;
-  padding-bottom: 80px;
-}
-
-.visual-card-stack {
-  display: flex;
-  flex-direction: column;
-  gap: 40px;
-  margin-top: 40px;
-}
-
-.visual-card-stack .card {
-  background: rgba(255,255,255,0.05);
-  border: 1px solid rgba(255,255,255,0.12);
-  padding: 0;
-  border-radius: 18px;
-  backdrop-filter: blur(10px);
-  box-shadow:
-    0 0 25px rgba(255,255,255,0.12),
-    0 0 45px rgba(0,0,0,0.45) inset;
-  overflow: hidden;
-  transition: transform 0.35s ease, box-shadow 0.35s ease;
-}
-
-.visual-card-stack .card:hover {
-  transform: translateY(-10px) rotate3d(1, 1, 0, 6deg);
-  box-shadow:
-    0 0 35px rgba(0,255,200,0.35),
-    0 0 55px rgba(255,255,255,0.15),
-    0 0 65px rgba(0,0,0,0.6) inset;
-}
-
-.visual-card-stack img {
-  display: block;
-  width: 100%;
-  height: auto;
-  border-radius: 0;
-}
-
-/* Key Features Two-Column Layout */
-.key-features-layout {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 40px;
-  align-items: stretch;
-  margin-top: 40px;
-}
-
-/* Left side: 2x2 card grid */
-.key-features-cards {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 28px;
-}
-
-/* Right side: large image card */
-.key-features-image {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 0;
-}
-
-.key-features-image img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  border-radius: 18px;
-}
-
-/* Mobile Responsive */
-@media (max-width: 900px) {
-  .key-features-layout {
+  .grid-2 {
     grid-template-columns: 1fr;
   }
-
-  .key-features-image {
-    height: auto;
-  }
 }
-
-.card img {
-  display: block;
-  width: 100%;
-  height: auto;
-  border-radius: 12px;
-  object-fit: contain;
-}
-
-/* Animated Gradient for Final CTA Section */
-.gradient-train-smarter {
-  background: linear-gradient(135deg, #ff004c, #4a00ff, #00d4ff);
-  background-size: 300% 300%;
-  animation: trainSmarterGradient 12s ease infinite;
-  padding-top: 80px;
-  padding-bottom: 80px;
-  border-radius: 0;
-}
-
-@keyframes trainSmarterGradient {
-  0% { background-position: 0% 50%; }
-  50% { background-position: 100% 50%; }
-  100% { background-position: 0% 50%; }
-}
-
-.navbar {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  flex-wrap: nowrap; /* prevents wrapping */
-  white-space: nowrap; /* forces one-line layout */
-  gap: 20px;
-}
-
-.navbar .nav-link {
-  white-space: nowrap; /* prevents individual links from wrapping */
-}
-
-.navbar > div {
-  display: flex;
-  align-items: center;
-  gap: 24px;
-  flex-wrap: nowrap;
-}
-
-.navbar-brand {
-  display: flex;
-  align-items: center;
-  gap: 14px;
-  white-space: nowrap;
-}
-
-.navbar-menu {
-  display: flex;
-  gap: 24px;
-  align-items: center;
-  white-space: nowrap;
-}
-
-.navbar {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 20px 0;
-  width: 100%;
-  flex-wrap: nowrap;
-}
-
-.navbar-brand {
-  display: flex;
-  align-items: center;
-  gap: 14px;
-  white-space: nowrap;
-  flex-shrink: 0; /* prevents it from shrinking into the menu */
-}
-
-.navbar-menu {
-  display: flex;
-  gap: 24px;
-  align-items: center;
-  white-space: nowrap;
-  flex-shrink: 1;
-}
-
-.nav-link {
-  white-space: nowrap;
-}
-
-.navbar-menu {
-  margin-left: auto;
-}
-
