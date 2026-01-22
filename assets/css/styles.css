@@ -342,17 +342,26 @@ p, .wide-text {
 }
 
 .inspiration-banner {
-  width: 100%;
-  padding: 80px 20px;
+  width: 100vw;
+  margin-left: calc(50% - 50vw);
+  margin-right: calc(50% - 50vw);
+
+  padding: 140px 20px; /* MUCH larger vertical space */
+  background: linear-gradient(135deg, #000000, #111111, #000000);
   text-align: center;
-  background: #000;
-  color: #fff;
+  color: #ffffff;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .inspiration-banner h1 {
-  font-size: 4rem;
+  font-size: 6rem;        /* MASSIVE headline */
   font-weight: 900;
-  letter-spacing: 2px;
+  letter-spacing: 3px;
   margin: 0;
   text-transform: uppercase;
+  line-height: 1.1;
 }
+
