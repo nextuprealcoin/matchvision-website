@@ -327,3 +327,17 @@ p, .wide-text {
     grid-template-columns: 1fr;
   }
 }
+
+.full-width-image {
+  width: 100vw;
+  margin-left: calc(50% - 50vw);
+  margin-right: calc(50% - 50vw);
+}
+
+.full-width-image img {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: cover;
+}
+
