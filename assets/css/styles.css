@@ -341,3 +341,18 @@ p, .wide-text {
   object-fit: cover;
 }
 
+.inspiration-banner {
+  width: 100%;
+  padding: 80px 20px;
+  text-align: center;
+  background: #000;
+  color: #fff;
+}
+
+.inspiration-banner h1 {
+  font-size: 4rem;
+  font-weight: 900;
+  letter-spacing: 2px;
+  margin: 0;
+  text-transform: uppercase;
+}
