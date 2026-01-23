@@ -307,7 +307,7 @@ body {
   100% { background-position: 0% 0%; }
 }
 
-/* ================= CLEAN GLOWING CLICKABLE CARDS ================= */
+/* ================= UNIFIED GLOWING CARDS ================= */
 
 .card-grid {
   display: grid;
@@ -316,6 +316,8 @@ body {
   margin-top: 40px;
 }
 
+/* Shared visual style for ALL cards */
+.card,
 .card-link {
   display: flex;
   flex-direction: column;
@@ -337,6 +339,8 @@ body {
   transition: transform 0.25s ease, box-shadow 0.25s ease;
 }
 
+/* Hover animation for both card types */
+.card:hover,
 .card-link:hover {
   transform: translateY(-6px);
   box-shadow:
@@ -344,6 +348,7 @@ body {
     0 0 45px rgba(0, 0, 0, 0.9);
 }
 
+.card h3,
 .card-link h3 {
   font-size: 1.4rem;
   font-weight: 700;
