@@ -40,11 +40,11 @@ body {
 
 .section h2 {
   text-align: center;
-  font-size: 2.6rem;
-  font-weight: 800;
-  letter-spacing: 0.06em;
+  font-size: 3rem;
+  font-weight: 900;
+  letter-spacing: 0.08em;
   text-transform: uppercase;
-  margin-bottom: 40px;
+  margin-bottom: 50px;
 
   opacity: 0;
   transform: translateY(20px);
@@ -171,7 +171,7 @@ body {
   flex-wrap: wrap;
 }
 
-/* ================= BUTTONS ================= */
+/* ================= BUTTONS — RED/WHITE/BLUE ANIMATED ================= */
 
 .primary-btn,
 .secondary-btn {
@@ -186,28 +186,31 @@ body {
   text-decoration: none;
   cursor: pointer;
   border: none;
-  transition: transform 0.18s ease, box-shadow 0.18s ease, background 0.18s ease;
-}
 
-.primary-btn {
-  background: linear-gradient(135deg, #00eaff, #ff7b00);
   color: #02030a;
-  box-shadow: 0 0 18px rgba(0, 234, 255, 0.35);
+  background: linear-gradient(
+    135deg,
+    #ff0000,
+    #ffffff,
+    #0000ff
+  );
+  background-size: 300% 300%;
+  animation: usaGradient 6s ease infinite;
+
+  box-shadow: 0 0 18px rgba(255, 255, 255, 0.25);
+  transition: transform 0.18s ease, box-shadow 0.18s ease;
 }
 
-.primary-btn:hover {
-  transform: translateY(-1px);
-  box-shadow: 0 0 26px rgba(0, 234, 255, 0.55);
-}
-
-.secondary-btn {
-  background: transparent;
-  color: #e5e5e5;
-  border: 1px solid rgba(229, 231, 235, 0.4);
-}
-
+.primary-btn:hover,
 .secondary-btn:hover {
-  background: rgba(15, 23, 42, 0.8);
+  transform: translateY(-2px);
+  box-shadow: 0 0 26px rgba(255, 255, 255, 0.45);
+}
+
+@keyframes usaGradient {
+  0% { background-position: 0% 0%; }
+  50% { background-position: 100% 100%; }
+  100% { background-position: 0% 0%; }
 }
 
 /* ================= SECTION BACKGROUNDS ================= */
