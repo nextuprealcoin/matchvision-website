@@ -18,7 +18,7 @@ body {
     "Segoe UI", sans-serif;
   background: #02030a;
   color: #f5f5f5;
-  font-size: 1.18rem; /* Larger global text */
+  font-size: 1.18rem;
   line-height: 1.75;
   -webkit-font-smoothing: antialiased;
 }
@@ -53,14 +53,8 @@ body {
 }
 
 @keyframes fadeInUp {
-  0% {
-    opacity: 0;
-    transform: translateY(20px);
-  }
-  100% {
-    opacity: 1;
-    transform: translateY(0);
-  }
+  0% { opacity: 0; transform: translateY(20px); }
+  100% { opacity: 1; transform: translateY(0); }
 }
 
 /* ================= GLOBAL TEXT UPGRADE ================= */
@@ -77,12 +71,6 @@ body {
 }
 
 .text-block {
-  text-align: center;
-}
-
-.card h3,
-.card p {
-  font-size: 1.25rem;
   text-align: center;
 }
 
@@ -214,12 +202,7 @@ body {
   border: none;
 
   color: #02030a;
-  background: linear-gradient(
-    135deg,
-    #ff0000,
-    #ffffff,
-    #0000ff
-  );
+  background: linear-gradient(135deg, #ff0000, #ffffff, #0000ff);
   background-size: 300% 300%;
   animation: usaGradient 6s ease infinite;
 
@@ -300,7 +283,7 @@ body {
   object-fit: cover;
 }
 
-/* ================= CARD GRID ================= */
+/* ================= CLICKABLE GRADIENT CARDS ================= */
 
 .card-grid {
   display: grid;
@@ -309,22 +292,47 @@ body {
   margin-top: 40px;
 }
 
-.card {
-  background: radial-gradient(circle at top, #020617, #02030a);
-  border-radius: 18px;
-  padding: 26px 22px 30px;
-  border: 1px solid rgba(148, 163, 184, 0.35);
-  box-shadow:
-    0 18px 45px rgba(0, 0, 0, 0.9),
-    0 0 30px rgba(0, 234, 255, 0.18);
+.card-link {
   display: flex;
   flex-direction: column;
-  gap: 18px;
+  justify-content: center;
+  align-items: center;
+
+  padding: 40px 20px;
+  border-radius: 18px;
+  text-decoration: none;
+  color: #ffffff;
+
+  background: linear-gradient(135deg, #ff0000, #ffffff, #0000ff);
+  background-size: 300% 300%;
+  animation: usaCardGradient 8s ease infinite;
+
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  box-shadow:
+    0 18px 45px rgba(0, 0, 0, 0.9),
+    0 0 40px rgba(255, 255, 255, 0.15);
+
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
 }
 
-.card h3 {
-  font-size: 1.35rem;
-  margin-bottom: 4px;
+.card-link:hover {
+  transform: translateY(-6px);
+  box-shadow:
+    0 25px 55px rgba(0, 0, 0, 0.9),
+    0 0 50px rgba(255, 255, 255, 0.25);
+}
+
+.card-link h3 {
+  font-size: 1.4rem;
+  font-weight: 700;
+  text-align: center;
+  color: #02030a;
+}
+
+@keyframes usaCardGradient {
+  0% { background-position: 0% 0%; }
+  50% { background-position: 100% 100%; }
+  100% { background-position: 0% 0%; }
 }
 
 /* ================= FAQ ================= */
@@ -405,12 +413,7 @@ body {
   white-space: nowrap;
   display: inline-block;
 
-  background: linear-gradient(
-    135deg,
-    #00eaff,
-    #ffffff,
-    #ff7b00
-  );
+  background: linear-gradient(135deg, #00eaff, #ffffff, #ff7b00);
   background-size: 300% 300%;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
