@@ -283,7 +283,31 @@ body {
   object-fit: cover;
 }
 
-/* ================= CLICKABLE GRADIENT CARDS ================= */
+/* ================= PLAYER DEVELOPMENT HUB — EDGE TO EDGE GRADIENT ================= */
+
+.player-hub-gradient {
+  width: 100vw;
+  margin-left: calc(50% - 50vw);
+  margin-right: calc(50% - 50vw);
+
+  padding: 100px 0;
+  background: linear-gradient(
+    135deg,
+    rgba(255, 0, 0, 0.25),
+    rgba(255, 255, 255, 0.25),
+    rgba(0, 0, 255, 0.25)
+  );
+  background-size: 300% 300%;
+  animation: hubGradientShift 12s ease-in-out infinite;
+}
+
+@keyframes hubGradientShift {
+  0% { background-position: 0% 0%; }
+  50% { background-position: 100% 100%; }
+  100% { background-position: 0% 0%; }
+}
+
+/* ================= CLEAN GLOWING CLICKABLE CARDS ================= */
 
 .card-grid {
   display: grid;
@@ -303,14 +327,12 @@ body {
   text-decoration: none;
   color: #ffffff;
 
-  background: linear-gradient(135deg, #ff0000, #ffffff, #0000ff);
-  background-size: 300% 300%;
-  animation: usaCardGradient 8s ease infinite;
-
+  background: rgba(2, 3, 10, 0.85);
   border: 1px solid rgba(255, 255, 255, 0.25);
+
   box-shadow:
-    0 18px 45px rgba(0, 0, 0, 0.9),
-    0 0 40px rgba(255, 255, 255, 0.15);
+    0 0 18px rgba(255, 255, 255, 0.08),
+    0 0 35px rgba(0, 0, 0, 0.8);
 
   transition: transform 0.25s ease, box-shadow 0.25s ease;
 }
@@ -318,21 +340,15 @@ body {
 .card-link:hover {
   transform: translateY(-6px);
   box-shadow:
-    0 25px 55px rgba(0, 0, 0, 0.9),
-    0 0 50px rgba(255, 255, 255, 0.25);
+    0 0 25px rgba(255, 255, 255, 0.25),
+    0 0 45px rgba(0, 0, 0, 0.9);
 }
 
 .card-link h3 {
   font-size: 1.4rem;
   font-weight: 700;
   text-align: center;
-  color: #02030a;
-}
-
-@keyframes usaCardGradient {
-  0% { background-position: 0% 0%; }
-  50% { background-position: 100% 100%; }
-  100% { background-position: 0% 0%; }
+  color: #ffffff;
 }
 
 /* ================= FAQ ================= */
