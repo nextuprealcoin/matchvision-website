@@ -36,6 +36,32 @@ body {
   position: relative;
 }
 
+/* ================= UNIFIED SECTION TITLES + ANIMATION ================= */
+
+.section h2 {
+  text-align: center;
+  font-size: 2.6rem;
+  font-weight: 800;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  margin-bottom: 40px;
+
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeInUp 1.2s ease-out forwards;
+}
+
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
 .section-transition-bottom {
   border-bottom: 1px solid rgba(255, 255, 255, 0.06);
 }
@@ -219,13 +245,6 @@ body {
   grid-template-columns: minmax(0, 1fr) minmax(0, 1.1fr);
 }
 
-.text-block h2 {
-  font-size: 2rem;
-  margin-bottom: 18px;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
-}
-
 .wide-text {
   color: #d1d5db;
   margin-bottom: 14px;
@@ -379,7 +398,7 @@ body {
 }
 
 .inspiration-banner h1 {
-  font-size: clamp(4rem, 10vw, 10rem); /* One line on desktop */
+  font-size: clamp(4rem, 10vw, 10rem);
   font-weight: 900;
   letter-spacing: 6px;
   margin: 0;
@@ -482,7 +501,7 @@ body {
   }
 
   .inspiration-banner h1 {
-    font-size: 2.4rem; /* Wrap + shrink on mobile */
+    font-size: 2.4rem;
     letter-spacing: 2px;
     white-space: normal;
   }
