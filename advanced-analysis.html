@@ -15,6 +15,40 @@
   <meta property="og:type" content="website" />
 
   <link rel="stylesheet" href="assets/css/styles.css">
+
+  <!-- SECTION-SPECIFIC STYLES -->
+  <style>
+    /* Subheadline Gradient Animation */
+    .who-for-subheadline {
+      font-size: 1.35rem;
+      font-weight: 800;
+      margin: 10px 0 40px 0;
+      text-align: center;
+      background: linear-gradient(135deg, #ff003c, #0066ff);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      animation: gradientShift 4s ease-in-out infinite alternate;
+    }
+
+    @keyframes gradientShift {
+      0% { background-position: 0% 0%; }
+      100% { background-position: 100% 100%; }
+    }
+
+    /* Hero Image Card Glow */
+    .who-for-image-card {
+      padding: 0;
+      overflow: hidden;
+      position: relative;
+      grid-column: span 2;
+      animation: whoGlow 4s ease-in-out infinite alternate;
+    }
+
+    @keyframes whoGlow {
+      0% { box-shadow: 0 0 20px rgba(255, 0, 60, 0.6); }
+      100% { box-shadow: 0 0 25px rgba(0, 102, 255, 0.6); }
+    }
+  </style>
 </head>
 
 <body>
@@ -332,6 +366,10 @@
 
       <h2>Who This Is For</h2>
 
+      <p class="who-for-subheadline">
+        Trusted by youth players, elite clubs, and professionals seeking to elevate their game intelligence and long‑term performance.
+      </p>
+
       <div class="card-grid">
 
         <div class="card">
@@ -352,6 +390,13 @@
         <div class="card">
           <h3>High‑Ambition Players</h3>
           <p>Those aiming to improve soccer IQ, decision‑making, and tactical impact.</p>
+        </div>
+
+        <!-- HERO IMAGE CARD (SPANS TWO COLUMNS) -->
+        <div class="card who-for-image-card">
+          <img src="assets/images/futbol-iq-advanced-analysis-youth.png" 
+               alt="Youth to Professional Development" 
+               style="width:100%; border-radius:18px;">
         </div>
 
       </div>
