@@ -576,3 +576,20 @@ body {
     background-position: 100% 100%;
   }
 }
+
+/* WHO THIS IS FOR — Image Card Glow */
+.who-for-image-card {
+  padding: 0;
+  overflow: hidden;
+  position: relative;
+  animation: whoGlow 4s ease-in-out infinite alternate;
+}
+
+@keyframes whoGlow {
+  0% {
+    box-shadow: 0 0 20px rgba(255, 0, 60, 0.6);
+  }
+  100% {
+    box-shadow: 0 0 25px rgba(0, 102, 255, 0.6);
+  }
+}
