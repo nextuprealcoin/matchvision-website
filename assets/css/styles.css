@@ -647,3 +647,12 @@ body {
   font-size: 0.95rem;
   text-align: center;
 }
+
+.card-grid .card img {
+  animation: cognitiveGlow 4s ease-in-out infinite alternate;
+}
+
+@keyframes cognitiveGlow {
+  0% { box-shadow: 0 0 18px rgba(255, 0, 60, 0.35); }
+  100% { box-shadow: 0 0 22px rgba(0, 102, 255, 0.35); }
+}
