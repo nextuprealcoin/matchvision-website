@@ -36,7 +36,7 @@
 
     .pricing-image-card {
       animation: pricingGlow 4s ease-in-out infinite alternate;
-      border-radius: 18px;
+      border-radius: 0;
       overflow: hidden;
     }
 
@@ -356,17 +356,18 @@
     </div>
   </section>
 
-    <!-- ================= TEAM ANALYSIS PRICING (VERTICAL LAYOUT) ================= -->
+    <!-- ================= TEAM ANALYSIS PRICING (VERTICAL LAYOUT + EDGE-TO-EDGE IMAGE) ================= -->
   <section id="team-pricing" class="section gradient-intelligence section-transition-blend">
     <div class="container center">
 
       <h2 class="center">Team Match Analysis Pricing</h2>
 
-      <!-- IMAGE FIRST -->
-      <div class="pricing-image-card" style="max-width:600px; margin:40px auto;">
+      <!-- EDGE-TO-EDGE IMAGE INSIDE CONTAINER -->
+      <div class="pricing-image-card" 
+           style="width:100%; margin:40px auto 50px auto; border-radius:0; overflow:hidden;">
         <img src="assets/images/futbol-iq-full-squad.png"
              alt="Full-Squad Tactical Evaluation"
-             style="width:100%; border-radius:18px;">
+             style="width:100%; height:auto; display:block;">
       </div>
 
       <!-- PRICING CARD BELOW -->
