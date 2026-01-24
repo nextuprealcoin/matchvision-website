@@ -48,6 +48,60 @@
       0% { box-shadow: 0 0 20px rgba(255, 0, 60, 0.6); }
       100% { box-shadow: 0 0 25px rgba(0, 102, 255, 0.6); }
     }
+
+    /* Pricing Flex Layout */
+    .pricing-flex {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 40px;
+      margin-top: 50px;
+      align-items: center;
+    }
+
+    /* Pricing Image Card */
+    .pricing-image-card {
+      animation: pricingGlow 4s ease-in-out infinite alternate;
+      border-radius: 18px;
+      overflow: hidden;
+    }
+
+    @keyframes pricingGlow {
+      0% { box-shadow: 0 0 20px rgba(255, 0, 60, 0.4); }
+      100% { box-shadow: 0 0 25px rgba(0, 102, 255, 0.4); }
+    }
+
+    /* Pricing Card Enhancements */
+    .pricing-card {
+      padding: 40px;
+      border-radius: 18px;
+      animation: pricingCardGlow 5s ease-in-out infinite alternate;
+    }
+
+    @keyframes pricingCardGlow {
+      0% { box-shadow: 0 0 20px rgba(120,120,255,0.4); }
+      100% { box-shadow: 0 0 25px rgba(255,0,120,0.4); }
+    }
+
+    /* Pricing List */
+    .pricing-list {
+      margin-top: 20px;
+      margin-bottom: 20px;
+      padding-left: 20px;
+      line-height: 1.6;
+      font-size: 1.1rem;
+    }
+
+    .pricing-list li {
+      margin-bottom: 8px;
+    }
+
+    /* Trust Note */
+    .trust-note {
+      margin-top: 20px;
+      opacity: 0.8;
+      font-size: 0.95rem;
+      text-align: center;
+    }
   </style>
 </head>
 
@@ -259,7 +313,7 @@
     </div>
   </section>
 
-  <!-- ================= INTELLIGENCE PROFILE ================= -->
+    <!-- ================= INTELLIGENCE PROFILE ================= -->
   <section class="section gradient-intelligence section-transition-bottom">
     <div class="container center">
 
@@ -404,22 +458,39 @@
     </div>
   </section>
 
-  <!-- ================= PRICING SECTION ================= -->
+    <!-- ================= ADVANCED PRICING (PREMIUM LAYOUT) ================= -->
   <section id="advanced-pricing" class="section gradient-intelligence section-transition-blend">
     <div class="container">
 
-      <h2>Advanced Match Analysis Pricing</h2>
+      <h2 class="center">Advanced Match Analysis Pricing</h2>
 
-      <div class="card-grid" style="margin-top:40px;">
+      <div class="pricing-flex">
 
-        <div class="card">
-          <h3 style="font-size:2rem; margin-bottom:10px;">$129</h3>
+        <!-- LEFT: IMAGE -->
+        <div class="pricing-image-card">
+          <img src="assets/images/futbol-iq-service-pack-advanced.png"
+               alt="Advanced Match Analysis Package"
+               style="width:100%; border-radius:18px;">
+        </div>
+
+        <!-- RIGHT: PRICING CARD -->
+        <div class="card pricing-card">
+
+          <h3 style="font-size:2.2rem; margin-bottom:10px;">$129</h3>
           <h3>Advanced Match Analysis</h3>
 
-          <p class="wide-text">
-            Built for serious players seeking elite‑level tactical and cognitive insight.  
-            Includes full SWOT evaluation, decision‑making analysis, and a development roadmap.
+          <p class="wide-text" style="margin-top:15px;">
+            A complete tactical and cognitive evaluation designed for players seeking elite‑level insight.
           </p>
+
+          <ul class="pricing-list">
+            <li>Full SWOT evaluation</li>
+            <li>Decision‑making analysis</li>
+            <li>Cognitive speed breakdown</li>
+            <li>Development roadmap (5–7 priorities)</li>
+            <li>Technical output metrics</li>
+            <li>Match influence timeline</li>
+          </ul>
 
           <a href="https://book.stripe.com/cNi6oI5TEbShaWZ1vLgMw01"
              target="_blank"
@@ -427,6 +498,11 @@
              style="margin-top:25px;">
             Purchase Advanced Analysis
           </a>
+
+          <p class="trust-note">
+            Trusted by youth, collegiate, and professional players worldwide.
+          </p>
+
         </div>
 
       </div>
