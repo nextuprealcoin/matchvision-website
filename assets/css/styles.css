@@ -549,3 +549,9 @@ body {
     0 0 35px rgba(0, 0, 0, 0.8);
   object-fit: cover;
 }
+
+/* ================= PRICING SECTION — FORCE 2 COLUMNS ================= */
+
+#standard-pricing .card-grid {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
