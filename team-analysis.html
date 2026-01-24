@@ -16,6 +16,85 @@
   <meta property="og:type" content="website" />
 
   <link rel="stylesheet" href="assets/css/styles.css">
+
+  <style>
+    .who-for-subheadline {
+      font-size: 1.35rem;
+      font-weight: 800;
+      margin: 10px 0 40px 0;
+      text-align: center;
+      background: linear-gradient(135deg, #ff003c, #0066ff);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      animation: gradientShift 4s ease-in-out infinite alternate;
+    }
+
+    @keyframes gradientShift {
+      0% { background-position: 0% 0%; }
+      100% { background-position: 100% 100%; }
+    }
+
+    .who-for-image-card {
+      padding: 0;
+      overflow: hidden;
+      grid-column: span 2;
+      animation: whoGlow 4s ease-in-out infinite alternate;
+    }
+
+    @keyframes whoGlow {
+      0% { box-shadow: 0 0 20px rgba(255, 0, 60, 0.6); }
+      100% { box-shadow: 0 0 25px rgba(0, 102, 255, 0.6); }
+    }
+
+    .pricing-flex {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 40px;
+      margin-top: 50px;
+      align-items: center;
+    }
+
+    .pricing-image-card {
+      animation: pricingGlow 4s ease-in-out infinite alternate;
+      border-radius: 18px;
+      overflow: hidden;
+    }
+
+    @keyframes pricingGlow {
+      0% { box-shadow: 0 0 20px rgba(255, 0, 60, 0.4); }
+      100% { box-shadow: 0 0 25px rgba(0, 102, 255, 0.4); }
+    }
+
+    .pricing-card {
+      padding: 40px;
+      border-radius: 18px;
+      animation: pricingCardGlow 5s ease-in-out infinite alternate;
+    }
+
+    @keyframes pricingCardGlow {
+      0% { box-shadow: 0 0 20px rgba(120,120,255,0.4); }
+      100% { box-shadow: 0 0 25px rgba(255,0,120,0.4); }
+    }
+
+    .pricing-list {
+      margin-top: 20px;
+      margin-bottom: 20px;
+      padding-left: 20px;
+      line-height: 1.6;
+      font-size: 1.1rem;
+    }
+
+    .pricing-list li {
+      margin-bottom: 8px;
+    }
+
+    .trust-note {
+      margin-top: 20px;
+      opacity: 0.8;
+      font-size: 0.95rem;
+      text-align: center;
+    }
+  </style>
 </head>
 
 <body>
@@ -46,7 +125,6 @@
         A full-squad tactical evaluation designed for coaches and teams seeking structured, data-driven match insights.
       </p>
 
-      <!-- ⭐ NEW CTA BUTTON ADDED HERE ⭐ -->
       <a href="#team-pricing"
          class="primary-btn"
          style="margin-top:30px; display:inline-block; box-shadow:0 0 25px rgba(120,120,255,0.6);">
@@ -67,82 +145,89 @@
     </div>
   </section>
 
-  <!-- ================= COMPREHENSIVE TACTICAL EVALUATION (GRADIENT) ================= -->
-<section class="section gradient-intelligence section-transition-bottom">
-  <div class="container center">
+  <!-- ================= ELITE TEAM EVALUATION (NEW 3-CARD LAYOUT) ================= -->
+  <section class="section gradient-intelligence section-transition-bottom">
+    <div class="container">
 
-    <h2>Comprehensive Tactical Evaluation for Teams</h2>
+      <h2>Elite-Level Tactical & Cognitive Team Evaluation</h2>
 
-    <p class="wide-text" style="margin-top:20px;">
-      The Team Match Analysis provides a complete tactical breakdown of your squad’s performance. 
-      Team Match Analysis delivers an objective, data-backed evaluation of how your squad actually 
-      functions within match conditions. Using structured video tagging and tactical frameworks, 
-      we quantify team shape integrity, spacing efficiency, pressing behavior, transition speed, 
-      and phase-to-phase execution across all game states.
-    </p>
+      <div class="card-grid">
 
-    <p class="wide-text" style="margin-top:20px;">
-      Rather than subjective observations or isolated clips, our analysis identifies recurring 
-      patterns—both positive and limiting—that influence chance creation, defensive stability, 
-      and tactical consistency. Coaches receive clear, actionable insight into why systems succeed 
-      or break down, allowing for targeted training design, informed game planning, and measurable 
-      improvement from match to match.
-    </p>
+        <div class="card">
+          <p>
+            The Team Match Analysis provides a complete tactical breakdown of your squad’s performance. Using structured video tagging and tactical frameworks, we quantify team shape integrity, spacing efficiency, pressing behavior, transition speed, and execution across all phases.
+          </p>
+        </div>
 
-  </div>
-</section>
+        <div class="card">
+          <p>
+            Rather than relying on subjective observations or isolated clips, our analysis identifies recurring patterns—both positive and limiting—that influence chance creation, defensive stability, and tactical consistency. Coaches receive clear, actionable insight into why systems succeed or break down.
+          </p>
+        </div>
 
-<!-- ================= FULL-WIDTH IMAGE (OUTSIDE GRADIENT) ================= -->
-<section style="padding:0; margin:0;">
-  <img src="assets/images/team-match-analysis.jpg"
-       alt="Team Match Analysis Overview"
-       style="width:100%; height:auto; display:block; margin:0; border-radius:0;" />
-</section>
+        <!-- NEW IMAGE CARD -->
+        <div class="card" style="padding:0; overflow:hidden;">
+          <img src="assets/images/futbol-iq-team-analysis-breakdown.png"
+               alt="Team Tactical Breakdown"
+               style="width:100%; height:auto; display:block; border-radius:18px;">
+        </div>
 
-  <!-- ================= WHAT'S INCLUDED (GLOW GRID) ================= -->
-<section class="section solana-divider-dark section-transition-bottom">
-  <div class="container">
-
-    <h2>What’s Included</h2>
-
-    <div class="grid-2" style="margin-top:30px;">
-
-      <div class="card glow-card">
-        <h3>Team Shape & Structure</h3>
-        <p>Evaluation of defensive and attacking organization across all phases.</p>
-      </div>
-
-      <div class="card glow-card">
-        <h3>Pressing & Defensive Triggers</h3>
-        <p>How and when the team applies pressure, including coordinated pressing cues.</p>
-      </div>
-
-      <div class="card glow-card">
-        <h3>Transition Moments</h3>
-        <p>Speed and effectiveness of attacking and defensive transitions.</p>
-      </div>
-
-      <div class="card glow-card">
-        <h3>Spacing & Rotations</h3>
-        <p>How well players support each other through positional play and rotations.</p>
-      </div>
-
-      <div class="card glow-card">
-        <h3>Key Tactical Themes</h3>
-        <p>Patterns, strengths, vulnerabilities, and recurring match behaviors.</p>
-      </div>
-
-      <div class="card glow-card">
-        <h3>Coach-Focused Recommendations</h3>
-        <p>Actionable insights to guide training sessions and tactical adjustments.</p>
       </div>
 
     </div>
+  </section>
 
-  </div>
-</section>
+  <!-- ================= FULL-WIDTH TEAM IMAGE ================= -->
+  <section style="padding:0; margin:0;">
+    <img src="assets/images/team-match-analysis.jpg"
+         alt="Team Match Analysis Overview"
+         style="width:100%; height:auto; display:block; margin:0;">
+  </section>
 
-  <!-- ================= TEAM ANALYTICS 1 — TACTICAL INTELLIGENCE ================= -->
+  <!-- ================= WHAT’S INCLUDED ================= -->
+  <section class="section solana-divider-dark section-transition-bottom">
+    <div class="container">
+
+      <h2>What’s Included</h2>
+
+      <div class="grid-2" style="margin-top:30px;">
+
+        <div class="card glow-card">
+          <h3>Team Shape & Structure</h3>
+          <p>Evaluation of defensive and attacking organization across all phases.</p>
+        </div>
+
+        <div class="card glow-card">
+          <h3>Pressing & Defensive Triggers</h3>
+          <p>How and when the team applies pressure, including coordinated pressing cues.</p>
+        </div>
+
+        <div class="card glow-card">
+          <h3>Transition Moments</h3>
+          <p>Speed and effectiveness of attacking and defensive transitions.</p>
+        </div>
+
+        <div class="card glow-card">
+          <h3>Spacing & Rotations</h3>
+          <p>How well players support each other through positional play and rotations.</p>
+        </div>
+
+        <div class="card glow-card">
+          <h3>Key Tactical Themes</h3>
+          <p>Patterns, strengths, vulnerabilities, and recurring match behaviors.</p>
+        </div>
+
+        <div class="card glow-card">
+          <h3>Coach-Focused Recommendations</h3>
+          <p>Actionable insights to guide training sessions and tactical adjustments.</p>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+    <!-- ================= TEAM ANALYTICS 1 — TACTICAL INTELLIGENCE ================= -->
   <section class="section gradient-analytics-1 section-transition-bottom" style="padding-top:60px; padding-bottom:60px;">
     <div class="container center">
 
@@ -190,81 +275,158 @@
     </div>
   </section>
 
-  <!-- ================= WHO THIS IS FOR (GLOW GRID) ================= -->
-<section class="section solana-divider-dark section-transition-bottom">
-  <div class="container">
+  <!-- ================= TEAM PERFORMANCE SUMMARY (NEW) ================= -->
+  <section class="section gradient-intelligence section-transition-bottom">
+    <div class="container">
 
-    <h2>Who This Is For</h2>
+      <div class="card" style="padding:40px; max-width:1000px; margin:0 auto; text-align:left;">
 
-    <div class="grid-2" style="margin-top:30px;">
+        <h2 style="margin-bottom:20px;">Team Performance Summary</h2>
 
-      <div class="card glow-card">
-        <h3>Coaches</h3>
-        <p>Those seeking objective, structured match evaluation to guide team development and tactical decision‑making.</p>
-      </div>
-
-      <div class="card glow-card">
-        <h3>Teams</h3>
-        <p>Squads aiming to improve tactical cohesion, spacing, and execution across all phases of play.</p>
-      </div>
-
-      <div class="card glow-card">
-        <h3>Clubs</h3>
-        <p>Organizations looking for external, professional performance analysis to support long‑term development.</p>
-      </div>
-
-      <div class="card glow-card">
-        <h3>Development Programs</h3>
-        <p>Academies and programs working to raise training standards and improve match‑to‑match consistency.</p>
-      </div>
-
-      <div class="card glow-card">
-        <h3>Opponent Scouting</h3>
-        <p>Ideal for breaking down upcoming opponents using objective, pattern‑based analysis to inform game plans, exploit tendencies, and prepare for tournaments or key fixtures.</p>
-      </div>
-
-      <div class="card glow-card">
-        <h3>Elite Players</h3>
-        <p>Designed for ECNL, MLS Next, college recruits, USL prospects, and aspiring MLS professionals seeking objective, pro‑level insights into tactical behaviors, decision patterns, and match impact.</p>
-      </div>
-
-    </div>
-
-  </div>
-</section>
-
-<!-- ================= TEAM ANALYSIS PRICING SECTION ================= -->
-<section id="team-pricing" class="section gradient-intelligence section-transition-blend">
-  <div class="container">
-
-    <h2 class="center">Team Match Analysis Pricing</h2>
-
-    <div class="center" style="margin-top:40px; display:flex; justify-content:center;">
-
-      <div class="card center" style="padding:40px; max-width:500px;">
-
-        <!-- Price at the top -->
-        <h3 style="font-size:2rem; margin-bottom:10px;">$199</h3>
-        <h3>Team Match Analysis</h3>
-
-        <p class="wide-text" style="margin-top:15px;">
-          A full‑squad tactical evaluation designed for coaches and teams seeking structured, 
-          data‑driven insights into shape, spacing, pressing, transitions, and match execution.
+        <p class="wide-text" style="margin-bottom:30px;">
+          A consolidated overview of the team’s tactical intelligence, technical output, and match influence. 
+          These insights combine quantitative metrics with qualitative interpretation to highlight collective strengths, 
+          structural vulnerabilities, and long‑term development priorities.
         </p>
 
-        <a href="https://book.stripe.com/cNi14o81M3lL1mp7U9gMw02"
-           target="_blank"
-           class="primary-btn"
-           style="margin-top:25px; display:inline-block; box-shadow:0 0 25px rgba(120,120,255,0.6);">
-          Purchase Team Analysis
-        </a>
+        <div class="summary-grid">
+
+          <div class="summary-item">
+            <h3>Team Shape Integrity</h3>
+            <p>Consistent — maintains compactness and structure across most phases.</p>
+          </div>
+
+          <div class="summary-item">
+            <h3>Pressing Coordination</h3>
+            <p>Strong — triggers are recognized early with synchronized pressure.</p>
+          </div>
+
+          <div class="summary-item">
+            <h3>Transition Speed</h3>
+            <p>Above average — quick reactions in both attacking and defensive transitions.</p>
+          </div>
+
+          <div class="summary-item">
+            <h3>Spacing & Rotations</h3>
+            <p>Improving — good support angles with occasional gaps in wide areas.</p>
+          </div>
+
+          <div class="summary-item">
+            <h3>Technical Output</h3>
+            <p>Balanced — productive involvement in passes, recoveries, and attacking entries.</p>
+          </div>
+
+          <div class="summary-item">
+            <h3>Match Influence</h3>
+            <p>Increasing — momentum builds as the match progresses.</p>
+          </div>
+
+        </div>
 
       </div>
 
     </div>
+  </section>
 
-  </div>
-</section>
+  <!-- ================= WHO THIS IS FOR (MOVED BELOW SUMMARY) ================= -->
+  <section class="section solana-divider-dark section-transition-bottom">
+    <div class="container">
+
+      <h2>Who This Is For</h2>
+
+      <p class="who-for-subheadline">
+        Trusted by coaches, clubs, and development programs seeking structured, objective, and professional team evaluation.
+      </p>
+
+      <div class="grid-2" style="margin-top:30px;">
+
+        <div class="card glow-card">
+          <h3>Coaches</h3>
+          <p>Those seeking objective, structured match evaluation to guide team development and tactical decision‑making.</p>
+        </div>
+
+        <div class="card glow-card">
+          <h3>Teams</h3>
+          <p>Squads aiming to improve tactical cohesion, spacing, and execution across all phases of play.</p>
+        </div>
+
+        <div class="card glow-card">
+          <h3>Clubs</h3>
+          <p>Organizations looking for external, professional performance analysis to support long‑term development.</p>
+        </div>
+
+        <div class="card glow-card">
+          <h3>Development Programs</h3>
+          <p>Academies and programs working to raise training standards and improve match‑to‑match consistency.</p>
+        </div>
+
+        <div class="card glow-card">
+          <h3>Opponent Scouting</h3>
+          <p>Ideal for breaking down upcoming opponents using objective, pattern‑based analysis to inform game plans.</p>
+        </div>
+
+        <div class="card glow-card">
+          <h3>Elite Players</h3>
+          <p>Designed for ECNL, MLS Next, college recruits, USL prospects, and aspiring professionals seeking tactical clarity.</p>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+    <!-- ================= TEAM ANALYSIS PRICING (PREMIUM LAYOUT) ================= -->
+  <section id="team-pricing" class="section gradient-intelligence section-transition-blend">
+    <div class="container">
+
+      <h2 class="center">Team Match Analysis Pricing</h2>
+
+      <div class="pricing-flex">
+
+        <!-- LEFT: IMAGE -->
+        <div class="pricing-image-card">
+          <img src="assets/images/futbol-iq-service-pack-team.png"
+               alt="Team Match Analysis Package"
+               style="width:100%; border-radius:18px;">
+        </div>
+
+        <!-- RIGHT: PRICING CARD -->
+        <div class="card pricing-card">
+
+          <h3 style="font-size:2.2rem; margin-bottom:10px;">$199</h3>
+          <h3>Team Match Analysis</h3>
+
+          <p class="wide-text" style="margin-top:15px;">
+            A full‑squad tactical evaluation designed for coaches and teams seeking structured, 
+            data‑driven insights into shape, spacing, pressing, transitions, and match execution.
+          </p>
+
+          <ul class="pricing-list">
+            <li>Full team tactical breakdown</li>
+            <li>Pressing & defensive trigger analysis</li>
+            <li>Transition speed evaluation</li>
+            <li>Spacing & rotation mapping</li>
+            <li>Key tactical themes & patterns</li>
+            <li>Coach‑focused recommendations</li>
+          </ul>
+
+          <a href="https://book.stripe.com/cNi14o81M3lL1mp7U9gMw02"
+             target="_blank"
+             class="primary-btn"
+             style="margin-top:25px;">
+            Purchase Team Analysis
+          </a>
+
+          <p class="trust-note">
+            Trusted by clubs, academies, and elite development programs worldwide.
+          </p>
+
+        </div>
+
+      </div>
+
+    </div>
+  </section>
 
   <!-- ================= FOOTER ================= -->
   <footer class="footer">
@@ -273,7 +435,7 @@
 
   <!-- ================= SCRIPTS ================= -->
   <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-  <script src="chart.js"></script>
+  <script src="assets/js/chart.js"></script>
 
 </body>
 </html>
