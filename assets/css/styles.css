@@ -529,3 +529,23 @@ body {
     white-space: normal;
   }
 }
+
+/* ================= IMAGE INSIDE CARD GRID ================= */
+
+.match-analysis-image {
+  grid-column: span 2;
+  align-self: end;
+  display: flex;
+  justify-content: center;
+  margin-top: -20px;
+}
+
+.match-analysis-image img {
+  width: 100%;
+  max-width: 100%;
+  border-radius: 18px;
+  box-shadow:
+    0 0 18px rgba(255, 255, 255, 0.08),
+    0 0 35px rgba(0, 0, 0, 0.8);
+  object-fit: cover;
+}
