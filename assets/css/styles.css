@@ -656,3 +656,40 @@ body {
   0% { box-shadow: 0 0 18px rgba(255, 0, 60, 0.35); }
   100% { box-shadow: 0 0 22px rgba(0, 102, 255, 0.35); }
 }
+
+/* ================= TECHNICAL DEVELOPMENT MODEL ================= */
+
+.tech-diagram {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 25px;
+  margin-top: 40px;
+}
+
+.tech-node {
+  padding: 22px 30px;
+  background: rgba(255,255,255,0.05);
+  border: 1px solid rgba(255,255,255,0.12);
+  border-radius: 14px;
+  font-weight: 600;
+  width: 100%;
+  max-width: 480px;
+  text-align: center;
+  backdrop-filter: blur(6px);
+  transition: 0.3s ease;
+  position: relative;
+  z-index: 5;
+}
+
+.tech-node:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 0 25px rgba(120,120,255,0.4);
+  border-color: rgba(255,255,255,0.3);
+}
+
+.tech-arrow {
+  font-size: 2rem;
+  opacity: 0.5;
+  margin: 5px 0;
+}
