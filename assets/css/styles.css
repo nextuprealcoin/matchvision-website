@@ -791,3 +791,11 @@ body {
     margin-bottom: 16px;
   }
 }
+
+.timeline-icon {
+  width: 34px;
+  height: 34px;
+  margin: 0 auto 12px auto;
+  opacity: 0.75;
+  filter: drop-shadow(0 0 6px rgba(255,255,255,0.35));
+}
