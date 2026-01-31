@@ -805,3 +805,42 @@ body {
   margin: 0 auto;
   text-align: center;
 }
+
+/* ================= TECHDEV IMAGE CARD ================= */
+
+.techdev-image-card {
+  padding: 0;
+  overflow: hidden;
+  border-radius: 18px;
+  position: relative;
+  animation: techdevGlow 5s ease-in-out infinite alternate;
+}
+
+.techdev-image-card:hover {
+  transform: translateY(-6px);
+  box-shadow:
+    0 0 25px rgba(255,255,255,0.25),
+    0 0 45px rgba(0,0,0,0.9);
+}
+
+.techdev-image {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: cover;
+  border-radius: 18px;
+}
+
+/* Animated glow behind the card */
+@keyframes techdevGlow {
+  0% {
+    box-shadow: 
+      0 0 20px rgba(255, 0, 60, 0.35),
+      0 0 30px rgba(0, 102, 255, 0.25);
+  }
+  100% {
+    box-shadow: 
+      0 0 25px rgba(0, 102, 255, 0.35),
+      0 0 35px rgba(255, 0, 60, 0.25);
+  }
+}
