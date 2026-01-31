@@ -201,6 +201,7 @@
         50% { background-position:100% 50%; }
         100% { background-position:0% 50%; }
       }
+
       .model-card {
         background:rgba(0,0,0,0.35);
         backdrop-filter:blur(12px);
@@ -210,117 +211,133 @@
         box-shadow:0 0 35px rgba(0,0,0,0.45);
         border:1px solid rgba(255,255,255,0.08);
       }
-      .small-node {
-        padding:10px 14px;
-        font-size:0.9rem;
-        border-radius:12px;
+
+      .rect-step {
+        background:rgba(255,255,255,0.08);
+        padding:18px 22px;
+        border-radius:14px;
+        color:white;
+        font-weight:600;
+        text-align:center;
+        min-width:180px;
+        box-shadow:0 0 15px rgba(0,0,0,0.35);
+      }
+
+      .arc-node {
+        background:rgba(255,255,255,0.12);
+        border:2px solid rgba(255,255,255,0.7);
+        padding:14px 18px;
+        border-radius:50px;
+        color:white;
+        font-weight:600;
         white-space:nowrap;
+        box-shadow:0 0 20px rgba(0,0,0,0.45);
       }
     </style>
 
     <div class="container center">
 
-      <h2 style="margin-bottom:20px;">Technical Development Model</h2>
-      <p class="wide-text" style="max-width:800px; margin:auto; margin-bottom:60px;">
+      <h2 style="margin-bottom:20px; color:white; font-size:2.6rem; font-weight:900; letter-spacing:-1px;">
+        TECHNICAL DEVELOPMENT MODEL
+      </h2>
+
+      <p class="wide-text" style="max-width:800px; margin:auto; margin-bottom:60px; color:white; opacity:0.9;">
         Technical development follows a clear progression — but it also functions as a continuous cycle of refinement.
         This upgraded model presents both the linear pathway and the developmental arc that shape elite technical ability.
       </p>
 
-      <!-- ================= PROGRESS TRACKER CARD ================= -->
+      <!-- ================= LINEAR PROGRESSION PATHWAY ================= -->
       <div class="model-card">
 
-        <h3 style="margin-bottom:25px;">Linear Progression Pathway</h3>
-
-        <div style="
-          width:100%;
-          height:4px;
-          background:rgba(255,255,255,0.18);
-          border-radius:4px;
-          margin-bottom:40px;
-        "></div>
+        <h3 style="margin-bottom:25px; color:white; font-size:1.8rem;">Linear Progression Pathway</h3>
 
         <div style="
           display:flex;
-          justify-content:space-between;
+          justify-content:center;
+          align-items:center;
           flex-wrap:wrap;
           gap:20px;
         ">
 
-          <div class="glow-card" style="padding:15px 20px; min-width:150px; text-align:center;">
-            Coordination & Motor Patterns
-          </div>
+          <div class="rect-step">Coordination & Motor Patterns</div>
 
-          <div class="glow-card" style="padding:15px 20px; min-width:150px; text-align:center;">
-            Ball Mastery
-          </div>
+          <!-- Inline SVG Arrow -->
+          <svg width="50" height="24" viewBox="0 0 50 24">
+            <path d="M0 12 H40 L30 2 M40 12 L30 22" stroke="white" stroke-width="3" fill="none"/>
+          </svg>
 
-          <div class="glow-card" style="padding:15px 20px; min-width:150px; text-align:center;">
-            Technique Under No Pressure
-          </div>
+          <div class="rect-step">Ball Mastery</div>
 
-          <div class="glow-card" style="padding:15px 20px; min-width:150px; text-align:center;">
-            Technique Under Passive Pressure
-          </div>
+          <svg width="50" height="24" viewBox="0 0 50 24">
+            <path d="M0 12 H40 L30 2 M40 12 L30 22" stroke="white" stroke-width="3" fill="none"/>
+          </svg>
 
-          <div class="glow-card" style="padding:15px 20px; min-width:150px; text-align:center;">
-            Technique Under Real Pressure
-          </div>
+          <div class="rect-step">Technique Under No Pressure</div>
 
-          <div class="glow-card" style="padding:15px 20px; min-width:150px; text-align:center;">
-            Technical Intelligence
-          </div>
+          <svg width="50" height="24" viewBox="0 0 50 24">
+            <path d="M0 12 H40 L30 2 M40 12 L30 22" stroke="white" stroke-width="3" fill="none"/>
+          </svg>
+
+          <div class="rect-step">Technique Under Passive Pressure</div>
+
+          <svg width="50" height="24" viewBox="0 0 50 24">
+            <path d="M0 12 H40 L30 2 M40 12 L30 22" stroke="white" stroke-width="3" fill="none"/>
+          </svg>
+
+          <div class="rect-step">Technique Under Real Pressure</div>
+
+          <svg width="50" height="24" viewBox="0 0 50 24">
+            <path d="M0 12 H40 L30 2 M40 12 L30 22" stroke="white" stroke-width="3" fill="none"/>
+          </svg>
+
+          <div class="rect-step">Technical Intelligence</div>
 
         </div>
       </div>
 
-      <!-- ================= DEVELOPMENT ARC CARD ================= -->
+      <!-- ================= DEVELOPMENT ARC ================= -->
       <div class="model-card">
 
-        <h3 style="margin-bottom:30px;">The Development Arc</h3>
+        <h3 style="margin-bottom:30px; color:white; font-size:1.8rem;">The Development Arc</h3>
 
         <div style="
           width:100%;
-          max-width:700px;
+          max-width:750px;
           margin:auto;
           position:relative;
-          height:350px;
+          height:360px;
         ">
 
-          <div style="
-            position:absolute;
-            top:50%;
-            left:50%;
-            width:90%;
-            height:90%;
-            border-top:3px solid rgba(255,255,255,0.25);
-            border-left:3px solid transparent;
-            border-right:3px solid transparent;
-            border-bottom:3px solid transparent;
-            border-radius:50%;
-            transform:translate(-50%, -50%);
-          "></div>
+          <!-- Glowing Arc (Inline SVG) -->
+          <svg width="100%" height="100%" viewBox="0 0 800 400" style="position:absolute; top:0; left:0;">
+            <path d="M50 350 Q400 50 750 350"
+              stroke="rgba(255,255,255,0.35)"
+              stroke-width="6"
+              fill="none"
+              filter="drop-shadow(0px 0px 12px rgba(255,255,255,0.4))"
+            />
+          </svg>
 
-          <div style="position:absolute; top:65%; left:10%; transform:translate(-50%, -50%);" class="glow-card small-node">
-            Coordination
-          </div>
+          <!-- Nodes -->
+          <div class="arc-node" style="position:absolute; top:72%; left:8%;">Coordination</div>
 
-          <div style="position:absolute; top:40%; left:25%; transform:translate(-50%, -50%);" class="glow-card small-node">
-            Ball Mastery
-          </div>
+          <div class="arc-node" style="position:absolute; top:48%; left:25%;">Ball Mastery</div>
 
-          <div style="position:absolute; top:25%; left:50%; transform:translate(-50%, -50%);" class="glow-card small-node">
+          <div class="arc-node" style="position:absolute; top:30%; left:50%; transform:translateX(-50%);">
             No Pressure
           </div>
 
-          <div style="position:absolute; top:40%; left:75%; transform:translate(-50%, -50%);" class="glow-card small-node">
-            Passive Pressure
-          </div>
+          <div class="arc-node" style="position:absolute; top:48%; left:75%;">Passive Pressure</div>
 
-          <div style="position:absolute; top:65%; left:90%; transform:translate(-50%, -50%);" class="glow-card small-node">
-            Real Pressure
-          </div>
+          <div class="arc-node" style="position:absolute; top:72%; left:92%;">Real Pressure</div>
 
-          <div style="position:absolute; top:5%; left:50%; transform:translate(-50%, -50%);" class="glow-card small-node">
+          <div class="arc-node" style="
+            position:absolute;
+            top:8%;
+            left:50%;
+            transform:translateX(-50%);
+            background:rgba(255,255,255,0.18);
+          ">
             Technical Intelligence
           </div>
 
@@ -331,33 +348,159 @@
     </div>
   </section>
 
-    <!-- ================= CTA SECTION ================= -->
-  <section class="section gradient-services section-transition-blend">
+    <!-- ================= TIMELINE ================= -->
+  <section class="section solana-divider-dark section-transition-bottom">
+    <div class="container">
+
+      <h2 style="text-align:center; margin-bottom:40px;">Technical Development Timeline</h2>
+
+      <div class="timeline">
+
+        <div class="timeline-item">
+          <h3>Phase 1: Foundation</h3>
+          <p class="wide-text">
+            Establish core coordination, motor patterns, and ball familiarity. Build stability and comfort with the ball.
+          </p>
+        </div>
+
+        <div class="timeline-item">
+          <h3>Phase 2: Ball Mastery</h3>
+          <p class="wide-text">
+            Develop controlled manipulation, directional receiving, and efficient dribbling mechanics.
+          </p>
+        </div>
+
+        <div class="timeline-item">
+          <h3>Phase 3: Execution Under No Pressure</h3>
+          <p class="wide-text">
+            Refine technique in clean, controlled environments to build consistency and precision.
+          </p>
+        </div>
+
+        <div class="timeline-item">
+          <h3>Phase 4: Execution Under Passive Pressure</h3>
+          <p class="wide-text">
+            Introduce guided pressure, limited defenders, and predictable challenges to increase realism.
+          </p>
+        </div>
+
+        <div class="timeline-item">
+          <h3>Phase 5: Execution Under Real Pressure</h3>
+          <p class="wide-text">
+            Apply technique in dynamic, unpredictable, game-like situations with real opponents.
+          </p>
+        </div>
+
+        <div class="timeline-item">
+          <h3>Phase 6: Technical Intelligence</h3>
+          <p class="wide-text">
+            Connect technique to decision-making, scanning, timing, and tactical execution.
+          </p>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ================= KEY TOPICS ================= -->
+  <section class="section solana-divider-dark section-transition-bottom">
+    <div class="container">
+
+      <h2 style="text-align:center; margin-bottom:40px;">Key Technical Topics</h2>
+
+      <div class="card-grid">
+
+        <div class="card glow-card">
+          <h3>First Touch</h3>
+          <p>Directional receiving, preparation touch, and controlling the ball under pressure.</p>
+        </div>
+
+        <div class="card glow-card">
+          <h3>Ball Manipulation</h3>
+          <p>Mastery of surface use, rhythm changes, and controlled movement with the ball.</p>
+        </div>
+
+        <div class="card glow-card">
+          <h3>Passing Technique</h3>
+          <p>Accuracy, weight, timing, and execution in various game scenarios.</p>
+        </div>
+
+        <div class="card glow-card">
+          <h3>Dribbling Mechanics</h3>
+          <p>Efficient movement, body orientation, and ball protection under pressure.</p>
+        </div>
+
+        <div class="card glow-card">
+          <h3>Finishing Technique</h3>
+          <p>Striking mechanics, composure, and finishing in realistic situations.</p>
+        </div>
+
+        <div class="card glow-card">
+          <h3>Technical Intelligence</h3>
+          <p>Scanning, timing, and choosing the right technique at the right moment.</p>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ================= FEATURED MODULES ================= -->
+  <section class="section solana-divider-dark section-transition-bottom">
+    <div class="container">
+
+      <h2 style="text-align:center; margin-bottom:40px;">Featured Technical Modules</h2>
+
+      <div class="card-grid">
+
+        <div class="card glow-card">
+          <h3>First Touch Mastery</h3>
+          <p>Develop elite-level receiving skills with directional control and preparation touches.</p>
+        </div>
+
+        <div class="card glow-card">
+          <h3>Ball Mastery Foundations</h3>
+          <p>Build coordination, rhythm, and ball control through structured progressions.</p>
+        </div>
+
+        <div class="card glow-card">
+          <h3>Passing Under Pressure</h3>
+          <p>Learn to execute passes with accuracy and composure in dynamic environments.</p>
+        </div>
+
+        <div class="card glow-card">
+          <h3>Dribbling Under Pressure</h3>
+          <p>Improve ball protection, change of direction, and decision-making while dribbling.</p>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ================= CTA ================= -->
+  <section class="section gradient-intelligence section-transition-bottom">
     <div class="container center">
 
-      <h2>Take Your Technical Ability Further</h2>
+      <h2 style="margin-bottom:20px;">Ready to Transform Your Technical Ability?</h2>
 
-      <p class="wide-text" style="max-width:800px; margin:20px auto 40px auto;">
-        Technical mastery is only the beginning — the next step is learning how to apply those skills under pressure,
-        in real match scenarios, with clarity and confidence. Our advanced analysis tools help players connect their
-        technical foundation to decision‑making, execution speed, and tactical intelligence.
+      <p class="wide-text" style="max-width:700px; margin:auto; margin-bottom:40px;">
+        Join Futbol IQ Academy and take your technical development to the next level with structured, intelligent, and
+        game-relevant training.
       </p>
 
-      <a href="advanced-analysis.html" class="primary-btn" style="margin-top:10px;">
-        Get Advanced Match Analysis
-      </a>
+      <a href="index.html#contact" class="btn-primary">Get Started</a>
 
     </div>
   </section>
 
   <!-- ================= FOOTER ================= -->
   <footer class="footer">
-    © 2026 Futbol IQ Academy. All rights reserved.
+    <div class="container center">
+      <p>© 2026 Futbol IQ Academy. All rights reserved.</p>
+    </div>
   </footer>
-
-  <!-- ================= SCRIPTS ================= -->
-  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-  <script src="assets/js/chart.js"></script>
 
 </body>
 </html>
