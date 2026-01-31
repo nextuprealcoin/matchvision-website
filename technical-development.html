@@ -251,7 +251,7 @@
         </div>
       </div>
 
-      <!-- ================= DEVELOPMENT ARC (CIRCULAR STYLE) ================= -->
+      <!-- ================= DEVELOPMENT ARC (CIRCULAR PROGRESSION) ================= -->
 <div class="model-card">
 
   <h3 style="margin-bottom:30px; color:white; font-size:1.8rem;">The Development Arc</h3>
@@ -268,54 +268,61 @@
     background:radial-gradient(circle at center, rgba(255,255,255,0.05), transparent);
   ">
 
-    <!-- Node: Coordination -->
+    <!-- Coordination (Start - Bottom) -->
     <div class="arc-node" style="
       position:absolute;
-      top:50%;
-      left:0%;
-      transform:translate(-50%, -50%);
+      bottom:0%;
+      left:50%;
+      transform:translate(-50%, 50%);
+      color:#00ff00;
     ">Coordination</div>
 
-    <!-- Node: Ball Mastery -->
+    <!-- Ball Mastery (Lower Left) -->
     <div class="arc-node" style="
       position:absolute;
-      top:15%;
-      left:25%;
-      transform:translate(-50%, -50%);
+      bottom:20%;
+      left:20%;
+      transform:translate(-50%, 50%);
+      color:#00ff00;
     ">Ball Mastery</div>
 
-    <!-- Node: No Pressure -->
+    <!-- No Pressure (Upper Left) -->
+    <div class="arc-node" style="
+      position:absolute;
+      top:25%;
+      left:15%;
+      transform:translate(-50%, -50%);
+      color:#00ff00;
+    ">No Pressure</div>
+
+    <!-- Passive Pressure (Upper Right) -->
+    <div class="arc-node" style="
+      position:absolute;
+      top:25%;
+      right:15%;
+      transform:translate(50%, -50%);
+      color:#ffff00;
+    ">Passive Pressure</div>
+
+    <!-- Real Pressure (Lower Right) -->
+    <div class="arc-node" style="
+      position:absolute;
+      bottom:20%;
+      right:20%;
+      transform:translate(50%, 50%);
+      color:#ffff00;
+    ">Real Pressure</div>
+
+    <!-- Technical Intelligence (Top - Ultimate Achievement) -->
     <div class="arc-node" style="
       position:absolute;
       top:0%;
       left:50%;
       transform:translate(-50%, -50%);
-    ">No Pressure</div>
-
-    <!-- Node: Technical Intelligence -->
-    <div class="arc-node" style="
-      position:absolute;
-      top:15%;
-      left:75%;
-      transform:translate(-50%, -50%);
+      font-weight:900;
+      color:#ff0000;
       background:rgba(255,255,255,0.18);
     ">Technical Intelligence</div>
-
-    <!-- Node: Passive Pressure -->
-    <div class="arc-node" style="
-      position:absolute;
-      top:50%;
-      left:100%;
-      transform:translate(-50%, -50%);
-    ">Passive Pressure</div>
-
-    <!-- Node: Real Pressure -->
-    <div class="arc-node" style="
-      position:absolute;
-      top:85%;
-      left:75%;
-      transform:translate(-50%, -50%);
-    ">Real Pressure</div>
 
   </div>
 
