@@ -172,7 +172,7 @@
     </div>
   </section>
 
-   <!-- ================= TECHNICAL DEVELOPMENT MODEL ================= -->
+    <!-- ================= TECHNICAL DEVELOPMENT MODEL ================= -->
   <section class="section section-transition-bottom"
     style="
       position:relative;
@@ -249,24 +249,49 @@
     </div>
   </section>
 
-  <!-- ================= CINEMATIC DIVIDER ================= -->
+  <!-- ================= CINEMATIC DIVIDER (GRADIENT TEXT ONLY) ================= -->
   <section style="
     width:100%;
     padding:80px 0;
-    background:linear-gradient(135deg, #5b2cff, #1e90ff, #6a00ff);
-    background-size:400% 400%;
-    animation:gradientShift 12s ease infinite;
     text-align:center;
+    background:#000;
   ">
+
     <h1 style="
-      font-size:4rem;
+      font-size:clamp(3rem, 8vw, 6rem);
       font-weight:900;
       letter-spacing:4px;
-      color:white;
       text-transform:uppercase;
+      white-space:nowrap;
     ">
-      FUTBOL <span style="color:#ff0000;">IQ</span> Intelligence
+
+      <!-- FUTBOL (Gradient Text) -->
+      <span style="
+        background:linear-gradient(135deg, #5b2cff, #1e90ff, #6a00ff);
+        background-size:400% 400%;
+        animation:gradientShift 8s ease infinite;
+        -webkit-background-clip:text;
+        -webkit-text-fill-color:transparent;
+      ">
+        Futbol
+      </span>
+
+      <!-- IQ (Solid Red) -->
+      <span style="color:#ff0000;">IQ</span>
+
+      <!-- INTELLIGENCE (Gradient Text) -->
+      <span style="
+        background:linear-gradient(135deg, #5b2cff, #1e90ff, #6a00ff);
+        background-size:400% 400%;
+        animation:gradientShift 8s ease infinite;
+        -webkit-background-clip:text;
+        -webkit-text-fill-color:transparent;
+      ">
+        Intelligence
+      </span>
+
     </h1>
+
   </section>
 
   <!-- ================= DEVELOPMENT ARC (CIRCULAR PROGRESSION) ================= -->
@@ -359,7 +384,7 @@
     </div>
   </section>
 
-    <!-- ================= KEY TECHNICAL TOPICS ================= -->
+  <!-- ================= KEY TECHNICAL TOPICS ================= -->
   <section class="section solana-divider-dark section-transition-bottom">
     <div class="container">
 
@@ -473,3 +498,4 @@
 
 </body>
 </html>
+  
