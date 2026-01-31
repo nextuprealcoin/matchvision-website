@@ -185,7 +185,7 @@ body {
   flex-wrap: wrap;
 }
 
-/* ================= BUTTONS — RED/WHITE/BLUE ANIMATED ================= */
+/* ================= BUTTONS ================= */
 
 .primary-btn,
 .secondary-btn {
@@ -283,7 +283,7 @@ body {
   object-fit: cover;
 }
 
-/* ================= PLAYER DEVELOPMENT HUB — EDGE TO EDGE GRADIENT ================= */
+/* ================= PLAYER DEVELOPMENT HUB ================= */
 
 .player-hub-gradient {
   width: 100vw;
@@ -316,7 +316,6 @@ body {
   margin-top: 40px;
 }
 
-/* Shared visual style for ALL cards */
 .card,
 .card-link {
   display: flex;
@@ -339,7 +338,6 @@ body {
   transition: transform 0.25s ease, box-shadow 0.25s ease;
 }
 
-/* Hover animation for both card types */
 .card:hover,
 .card-link:hover {
   transform: translateY(-6px);
@@ -530,33 +528,12 @@ body {
   }
 }
 
-/* ================= IMAGE INSIDE CARD GRID ================= */
-
-.match-analysis-image {
-  grid-column: span 2;
-  align-self: end;
-  display: flex;
-  justify-content: center;
-  margin-top: -20px;
-}
-
-.match-analysis-image img {
-  width: 100%;
-  max-width: 100%;
-  border-radius: 18px;
-  box-shadow:
-    0 0 18px rgba(255, 255, 255, 0.08),
-    0 0 35px rgba(0, 0, 0, 0.8);
-  object-fit: cover;
-}
-
-/* ================= PRICING SECTION — FORCE 2 COLUMNS ================= */
+/* ================= PRICING SECTION ================= */
 
 #standard-pricing .card-grid {
   grid-template-columns: repeat(2, minmax(0, 1fr));
 }
 
-/* WHO THIS IS FOR — Gradient Subheadline */
 .who-for-subheadline {
   font-size: 1.35rem;
   font-weight: 800;
@@ -569,15 +546,10 @@ body {
 }
 
 @keyframes gradientShift {
-  0% {
-    background-position: 0% 0%;
-  }
-  100% {
-    background-position: 100% 100%;
-  }
+  0% { background-position: 0% 0%; }
+  100% { background-position: 100% 100%; }
 }
 
-/* WHO THIS IS FOR — Image Card Glow */
 .who-for-image-card {
   padding: 0;
   overflow: hidden;
@@ -586,15 +558,10 @@ body {
 }
 
 @keyframes whoGlow {
-  0% {
-    box-shadow: 0 0 20px rgba(255, 0, 60, 0.6);
-  }
-  100% {
-    box-shadow: 0 0 25px rgba(0, 102, 255, 0.6);
-  }
+  0% { box-shadow: 0 0 20px rgba(255, 0, 60, 0.6); }
+  100% { box-shadow: 0 0 25px rgba(0, 102, 255, 0.6); }
 }
 
-/* Pricing Flex Layout */
 .pricing-flex {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -603,7 +570,6 @@ body {
   align-items: center;
 }
 
-/* Pricing Image Card */
 .pricing-image-card {
   animation: pricingGlow 4s ease-in-out infinite alternate;
   border-radius: 18px;
@@ -615,7 +581,6 @@ body {
   100% { box-shadow: 0 0 25px rgba(0, 102, 255, 0.4); }
 }
 
-/* Pricing Card Enhancements */
 .pricing-card {
   padding: 40px;
   border-radius: 18px;
@@ -627,7 +592,6 @@ body {
   100% { box-shadow: 0 0 25px rgba(255,0,120,0.4); }
 }
 
-/* Pricing List */
 .pricing-list {
   margin-top: 20px;
   margin-bottom: 20px;
@@ -640,13 +604,14 @@ body {
   margin-bottom: 8px;
 }
 
-/* Trust Note */
 .trust-note {
   margin-top: 20px;
   opacity: 0.8;
   font-size: 0.95rem;
   text-align: center;
 }
+
+/* ================= IMAGE CARD GLOW ================= */
 
 .card-grid .card img {
   animation: cognitiveGlow 4s ease-in-out infinite alternate;
@@ -657,39 +622,55 @@ body {
   100% { box-shadow: 0 0 22px rgba(0, 102, 255, 0.35); }
 }
 
-/* ================= TECHNICAL DEVELOPMENT MODEL ================= */
+/* ================= TECHNICAL DEVELOPMENT MODEL (MERGED) ================= */
 
-.tech-diagram {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 25px;
-  margin-top: 40px;
+.model-card {
+  background: rgba(0,0,0,0.35);
+  backdrop-filter: blur(12px);
+  border-radius: 22px;
+  padding: 40px;
+  margin-bottom: 60px;
+  box-shadow: 0 0 35px rgba(0,0,0,0.45);
+  border: 1px solid rgba(255,255,255,0.08);
 }
 
-.tech-node {
-  padding: 22px 30px;
-  background: rgba(255,255,255,0.05);
-  border: 1px solid rgba(255,255,255,0.12);
+.rect-step {
+  background: rgba(255,255,255,0.08);
+  padding: 18px 22px;
   border-radius: 14px;
+  color: white;
   font-weight: 600;
-  width: 100%;
-  max-width: 480px;
   text-align: center;
-  backdrop-filter: blur(6px);
-  transition: 0.3s ease;
-  position: relative;
-  z-index: 5;
+  min-width: 180px;
+  box-shadow: 0 0 15px rgba(0,0,0,0.35);
 }
 
-.tech-node:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 0 25px rgba(120,120,255,0.4);
-  border-color: rgba(255,255,255,0.3);
+.arc-node {
+  background: rgba(255,255,255,0.12);
+  border: 2px solid rgba(255,255,255,0.7);
+  padding: 14px 18px;
+  border-radius: 50px;
+  color: white;
+  font-weight: 600;
+  white-space: nowrap;
+  box-shadow: 0 0 20px rgba(0,0,0,0.45);
 }
 
-.tech-arrow {
-  font-size: 2rem;
-  opacity: 0.5;
-  margin: 5px 0;
+/* ================= TECHNICAL MODEL — MOBILE OVERRIDES ================= */
+
+@media (max-width: 640px) {
+  .arc-node {
+    padding: 10px 14px;
+    font-size: 0.85rem;
+  }
+
+  .rect-step {
+    min-width: 140px;
+    padding: 14px 16px;
+    font-size: 0.9rem;
+  }
+
+  .model-card {
+    padding: 28px;
+  }
 }
