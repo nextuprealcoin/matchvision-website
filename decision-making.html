@@ -15,13 +15,12 @@
   <link rel="stylesheet" href="assets/css/styles.css">
 
   <style>
-    /* Subtle animated border glow for image cards */
+    /* Glow wrapper for images */
     .glow-image-wrapper {
       position: relative;
       border-radius: 12px;
       overflow: hidden;
     }
-
     .glow-image-wrapper::before {
       content: "";
       position: absolute;
@@ -45,13 +44,44 @@
       display: block;
       opacity: 0.9;
     }
+
+    /* Scroll-triggered animations */
+    .fade-up {
+      opacity: 0;
+      transform: translateY(30px);
+      transition: opacity 0.8s ease, transform 0.8s ease;
+    }
+    .fade-up.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    .fade-stagger {
+      opacity: 0;
+      transform: translateY(40px);
+      transition: opacity 0.9s ease, transform 0.9s ease;
+    }
+    .fade-stagger.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    .scale-in {
+      opacity: 0;
+      transform: scale(0.92);
+      transition: opacity 0.7s ease, transform 0.7s ease;
+    }
+    .scale-in.visible {
+      opacity: 1;
+      transform: scale(1);
+    }
   </style>
 </head>
 
 <body>
 
   <!-- ================= NAVIGATION ================= -->
-  <nav class="navbar container">
+  <nav class="navbar container fade-up">
     <div class="logo-container">
       <img src="futbol-iq-logo.png" class="logo" />
       <h3>Futbol <span style="color:#ff0000;">IQ</span> Academy</h3>
@@ -68,15 +98,15 @@
   </nav>
 
   <!-- ================= HERO ================= -->
-  <header class="hero gradient-hero section-transition-bottom">
-    <div class="container hero-content center fade-in">
+  <header class="hero gradient-hero section-transition-bottom fade-up">
+    <div class="container hero-content center fade-up">
       <h1 class="hero-main-headline">Decision Making</h1>
       <p class="hero-subline">Train the cognitive engine that drives elite performance.</p>
     </div>
   </header>
 
   <!-- ================= BREADCRUMB ================= -->
-  <section class="section solana-divider-dark section-transition-bottom">
+  <section class="section solana-divider-dark section-transition-bottom fade-up">
     <div class="container">
       <p class="wide-text" style="opacity:0.7;">
         <a href="index.html">Home</a> › 
@@ -90,7 +120,7 @@
   <section class="section solana-divider-dark section-transition-bottom">
     <div class="container" style="display:flex; flex-wrap:wrap; gap:40px; align-items:center;">
 
-      <div style="flex:1 1 500px; min-width:300px;">
+      <div class="fade-up" style="flex:1 1 500px; min-width:300px;">
         <h2>The Core of Intelligent Play</h2>
 
         <p class="wide-text">
@@ -106,7 +136,7 @@
         </p>
       </div>
 
-      <div style="flex:0 1 400px; min-width:280px;">
+      <div class="fade-up" style="flex:0 1 400px; min-width:280px;">
         <img src="assets/images/futbol-iq-brain.png" 
              alt="Brain fused with soccer ball"
              style="border-radius:12px; box-shadow:0 0 35px rgba(255,255,255,0.15);" />
@@ -116,7 +146,7 @@
   </section>
 
     <!-- ================= FIQA INTELLIGENCE BANNER ================= -->
-  <section style="width:100%; padding:80px 0; text-align:center; background:#000;">
+  <section class="fade-up" style="width:100%; padding:80px 0; text-align:center; background:#000;">
     <h1 style="
       font-size:clamp(3rem, 8vw, 6rem);
       font-weight:900;
@@ -153,14 +183,14 @@
       animation:gradientShift 18s ease infinite;
     ">
 
-    <div class="container center">
+    <div class="container center fade-up">
 
-      <h2 style="color:white; font-size:2.6rem; font-weight:900; margin-bottom:20px;">
+      <h2 class="fade-up" style="color:white; font-size:2.6rem; font-weight:900; margin-bottom:20px;">
         The Decision-Making Pyramid
       </h2>
 
       <!-- Explanation Card -->
-      <div class="card glow-card" style="margin:0 auto 50px auto; max-width:850px;">
+      <div class="card glow-card fade-up" style="margin:0 auto 50px auto; max-width:850px;">
         <p style="color:white; opacity:0.9;">
           The Decision-Making Pyramid represents the hierarchy of cognitive processing in football. 
           Each layer builds on the one below it — rising from raw perception to true game intelligence.
@@ -168,7 +198,7 @@
       </div>
 
       <!-- PYRAMID WRAPPER WITH GLOW OUTLINE -->
-      <div style="
+      <div class="fade-up" style="
         padding:30px;
         border-radius:16px;
         border:2px solid rgba(255,255,255,0.25);
@@ -188,7 +218,7 @@
 
           <!-- APEX -->
           <div style="text-align:center;">
-            <div class="card glow-card" style="
+            <div class="card glow-card fade-stagger" style="
               width:260px;
               text-align:center;
               color:white;
@@ -198,14 +228,14 @@
               <span class="pyramid-icon">⭐</span>
               Game Intelligence
             </div>
-            <p style="color:white; opacity:0.8; margin-top:8px; font-size:0.9rem;">
+            <p class="fade-up" style="color:white; opacity:0.8; margin-top:8px; font-size:0.9rem;">
               The ability to consistently choose the highest-value solution.
             </p>
           </div>
 
           <!-- EXECUTION -->
           <div style="text-align:center;">
-            <div class="card glow-card" style="
+            <div class="card glow-card fade-stagger" style="
               width:340px;
               text-align:center;
               color:white;
@@ -213,14 +243,14 @@
               <span class="pyramid-icon">⚡</span>
               Execution
             </div>
-            <p style="color:white; opacity:0.8; margin-top:8px; font-size:0.9rem;">
+            <p class="fade-up" style="color:white; opacity:0.8; margin-top:8px; font-size:0.9rem;">
               Turning decisions into precise, well-timed actions.
             </p>
           </div>
 
           <!-- ACTION SELECTION -->
           <div style="text-align:center;">
-            <div class="card glow-card" style="
+            <div class="card glow-card fade-stagger" style="
               width:420px;
               text-align:center;
               color:white;
@@ -228,14 +258,14 @@
               <span class="pyramid-icon">🎯</span>
               Action Selection
             </div>
-            <p style="color:white; opacity:0.8; margin-top:8px; font-size:0.9rem;">
+            <p class="fade-up" style="color:white; opacity:0.8; margin-top:8px; font-size:0.9rem;">
               Choosing the optimal solution based on the situation.
             </p>
           </div>
 
           <!-- INTERPRETATION -->
           <div style="text-align:center;">
-            <div class="card glow-card" style="
+            <div class="card glow-card fade-stagger" style="
               width:500px;
               text-align:center;
               color:white;
@@ -243,14 +273,14 @@
               <span class="pyramid-icon">🧠</span>
               Interpretation
             </div>
-            <p style="color:white; opacity:0.8; margin-top:8px; font-size:0.9rem;">
+            <p class="fade-up" style="color:white; opacity:0.8; margin-top:8px; font-size:0.9rem;">
               Understanding what cues mean and predicting outcomes.
             </p>
           </div>
 
           <!-- PERCEPTION (BASE) -->
           <div style="text-align:center;">
-            <div class="card glow-card" style="
+            <div class="card glow-card fade-stagger" style="
               width:580px;
               text-align:center;
               color:white;
@@ -258,7 +288,7 @@
               <span class="pyramid-icon">👁️</span>
               Perception
             </div>
-            <p style="color:white; opacity:0.8; margin-top:8px; font-size:0.9rem;">
+            <p class="fade-up" style="color:white; opacity:0.8; margin-top:8px; font-size:0.9rem;">
               What you see — scanning, awareness, and information intake.
             </p>
           </div>
@@ -271,10 +301,10 @@
   </section>
 
   <!-- ================= DECISION-MAKING UNDER PRESSURE ================= -->
-  <section class="section solana-divider-dark section-transition-bottom">
+  <section class="section solana-divider-dark section-transition-bottom fade-up">
     <div class="container">
 
-      <h2>Decision-Making Under Pressure</h2>
+      <h2 class="fade-up">Decision-Making Under Pressure</h2>
 
       <div style="
         display:flex;
@@ -285,7 +315,7 @@
       ">
 
         <!-- TEXT CARD -->
-        <div class="card glow-card" style="flex:1 1 480px; min-width:300px;">
+        <div class="card glow-card fade-up" style="flex:1 1 480px; min-width:300px;">
           <p class="wide-text">
             Pressure exposes cognitive weaknesses. When time and space shrink, players with poor decision-making revert to instinct, panic, or predictable patterns. Elite players maintain clarity, adapt quickly, and continue to choose high-value options even in chaotic environments.
           </p>
@@ -296,7 +326,7 @@
         </div>
 
         <!-- IMAGE CARD WITH ANIMATED BORDER GLOW -->
-        <div class="card glow-card" style="flex:0 1 420px; min-width:280px; padding:0; background:none;">
+        <div class="card glow-card fade-up" style="flex:0 1 420px; min-width:280px; padding:0; background:none;">
           <div class="glow-image-wrapper">
             <img 
               src="assets/images/futbol-iq-decision-making-pressure.png"
@@ -311,7 +341,7 @@
     </div>
   </section>
 
-  <!-- ================= COGNITIVE SPEED MODEL ================= -->
+    <!-- ================= COGNITIVE SPEED MODEL ================= -->
   <section class="section section-transition-bottom"
     style="
       position:relative;
@@ -322,13 +352,13 @@
       animation:gradientShift 18s ease infinite;
     ">
 
-    <div class="container center">
+    <div class="container center fade-up">
 
-      <h2 style="margin-bottom:20px; font-size:2.6rem; font-weight:900; letter-spacing:-1px; color:white;">
+      <h2 class="fade-up" style="margin-bottom:20px; font-size:2.6rem; font-weight:900; letter-spacing:-1px; color:white;">
         The Cognitive Speed Model
       </h2>
 
-      <div class="card glow-card" style="margin:0 auto 40px auto; max-width:850px;">
+      <div class="card glow-card fade-up" style="margin:0 auto 40px auto; max-width:850px;">
         <p style="color:white; opacity:0.9;">
           Cognitive speed is the time it takes a player to move from seeing a situation to acting on it. Faster cognitive
           speed means faster decisions — and fewer mistakes. We break cognitive speed into four measurable components that
@@ -338,22 +368,22 @@
 
       <div class="grid-2" style="margin-top:40px;">
 
-        <div class="card glow-card">
+        <div class="card glow-card scale-in">
           <h3 style="color:white;">1. Perception</h3>
           <p style="color:white; opacity:0.85;">Scanning, reading cues, identifying space, tracking opponents, and recognizing patterns.</p>
         </div>
 
-        <div class="card glow-card">
+        <div class="card glow-card scale-in">
           <h3 style="color:white;">2. Interpretation</h3>
           <p style="color:white; opacity:0.85;">Understanding what the cues mean, predicting outcomes, and evaluating risk vs reward.</p>
         </div>
 
-        <div class="card glow-card">
+        <div class="card glow-card scale-in">
           <h3 style="color:white;">3. Action Selection</h3>
           <p style="color:white; opacity:0.85;">Choosing the optimal solution: pass, dribble, shoot, move, or retain possession.</p>
         </div>
 
-        <div class="card glow-card">
+        <div class="card glow-card scale-in">
           <h3 style="color:white;">4. Execution</h3>
           <p style="color:white; opacity:0.85;">Carrying out the decision with clean technique, timing, and precision.</p>
         </div>
@@ -364,13 +394,13 @@
   </section>
 
   <!-- ================= COMMON PLAYER MISTAKES ================= -->
-  <section class="section solana-divider-dark section-transition-bottom">
+  <section class="section solana-divider-dark section-transition-bottom fade-up">
     <div class="container">
 
-      <h2>Common Decision-Making Mistakes</h2>
+      <h2 class="fade-up">Common Decision-Making Mistakes</h2>
 
       <!-- IMAGE BELOW TITLE -->
-      <div class="card glow-card" style="max-width:700px; margin:30px auto 50px auto; padding:0; background:none;">
+      <div class="card glow-card fade-up" style="max-width:700px; margin:30px auto 50px auto; padding:0; background:none;">
         <div class="glow-image-wrapper">
           <img 
             src="assets/images/futbol-iq-decision-making-mistakes.png"
@@ -383,7 +413,7 @@
       <!-- TEXT GRID WITH ANIMATED GRADIENT BACKGROUND -->
       <div class="card-grid" style="margin-top:10px;">
 
-        <div class="card glow-card" style="
+        <div class="card glow-card scale-in" style="
           background:linear-gradient(135deg, #5b2cff, #1e90ff, #6a00ff);
           background-size:400% 400%;
           animation:gradientShift 12s ease infinite;
@@ -392,7 +422,7 @@
           <p>Failing to scan or track opponents leads to slow reactions and poor positioning.</p>
         </div>
 
-        <div class="card glow-card" style="
+        <div class="card glow-card scale-in" style="
           background:linear-gradient(135deg, #5b2cff, #1e90ff, #6a00ff);
           background-size:400% 400%;
           animation:gradientShift 12s ease infinite;
@@ -401,7 +431,7 @@
           <p>Players who repeat the same patterns become easy to defend.</p>
         </div>
 
-        <div class="card glow-card" style="
+        <div class="card glow-card scale-in" style="
           background:linear-gradient(135deg, #5b2cff, #1e90ff, #6a00ff);
           background-size:400% 400%;
           animation:gradientShift 12s ease infinite;
@@ -410,7 +440,7 @@
           <p>Slow cognitive processing results in rushed or low-quality actions.</p>
         </div>
 
-        <div class="card glow-card" style="
+        <div class="card glow-card scale-in" style="
           background:linear-gradient(135deg, #5b2cff, #1e90ff, #6a00ff);
           background-size:400% 400%;
           animation:gradientShift 12s ease infinite;
@@ -419,7 +449,7 @@
           <p>Incorrectly judging time and space leads to turnovers and poor risk management.</p>
         </div>
 
-        <div class="card glow-card" style="
+        <div class="card glow-card scale-in" style="
           background:linear-gradient(135deg, #5b2cff, #1e90ff, #6a00ff);
           background-size:400% 400%;
           animation:gradientShift 12s ease infinite;
@@ -437,34 +467,34 @@
   </section>
 
   <!-- ================= HOW WE TRAIN DECISION-MAKING ================= -->
-  <section class="section solana-divider-dark section-transition-bottom">
+  <section class="section solana-divider-dark section-transition-bottom fade-up">
     <div class="container">
 
-      <h2>How We Train Decision-Making</h2>
+      <h2 class="fade-up">How We Train Decision-Making</h2>
 
-      <p class="wide-text">
+      <p class="wide-text fade-up">
         Decision-making is trainable — but only when approached systematically. Our methodology blends cognitive science,
         video analysis, and game-based training to accelerate player intelligence.
       </p>
 
       <div class="grid-2" style="margin-top:40px;">
 
-        <div class="card glow-card">
+        <div class="card glow-card scale-in">
           <h3>Video-Based Pattern Recognition</h3>
           <p>Players learn to identify recurring cues and anticipate outcomes through guided video analysis.</p>
         </div>
 
-        <div class="card glow-card">
+        <div class="card glow-card scale-in">
           <h3>Scanning & Perception Training</h3>
           <p>We use structured scanning drills to improve information intake and situational awareness.</p>
         </div>
 
-        <div class="card glow-card">
+        <div class="card glow-card scale-in">
           <h3>Constraint-Based Games</h3>
           <p>Small-sided games with specific rules force players to adapt and make faster decisions.</p>
         </div>
 
-        <div class="card glow-card">
+        <div class="card glow-card scale-in">
           <h3>Cognitive Load Training</h3>
           <p>We introduce mental challenges that simulate match stress and improve decision quality under pressure.</p>
         </div>
@@ -475,24 +505,35 @@
   </section>
 
   <!-- ================= CTA SECTION ================= -->
-  <section class="section gradient-services section-transition-blend">
+  <section class="section gradient-services section-transition-blend fade-up">
     <div class="container center">
-      <h2>Develop Elite Decision-Making</h2>
+      <h2 class="fade-up">Develop Elite Decision-Making</h2>
 
-      <a href="advanced-analysis.html" class="primary-btn" style="margin-top:30px;">
+      <a href="advanced-analysis.html" class="primary-btn fade-up" style="margin-top:30px;">
         Get Advanced Match Analysis
       </a>
     </div>
   </section>
 
   <!-- ================= FOOTER ================= -->
-  <footer class="footer">
+  <footer class="footer fade-up">
     © 2026 Futbol IQ Academy. All rights reserved.
   </footer>
 
-  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-  <script src="chart.js"></script>
+  <!-- ================= SCROLL ANIMATION SCRIPT ================= -->
+  <script>
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("visible");
+        }
+      });
+    }, { threshold: 0.2 });
+
+    document.querySelectorAll(".fade-up, .fade-stagger, .scale-in")
+      .forEach(el => observer.observe(el));
+  </script>
 
 </body>
 </html>
-  
+
