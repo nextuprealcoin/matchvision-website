@@ -319,8 +319,7 @@ body {
 
 /* ================= MISTAKE CARD ANIMATED BACKGROUND ================= */
 
-.mistake-card,
-.card-grid .card.mistake-card {
+.mistake-card {
   background: linear-gradient(135deg, #5b2cff, #1e90ff, #6a00ff);
   background-size: 400% 400%;
   animation: gradientShift 12s ease infinite;
@@ -335,16 +334,7 @@ body {
   opacity: 0.9;
 }
 
-/* Force perfect centering of all pyramid layers */
-.pyramid-stack {
-  display: flex;
-  flex-direction: column;
-  align-items: center !important;
-  justify-content: center;
-  width: 100%;
-}
-
-/* ================= PYRAMID GLOW OUTLINE WRAPPER ================= */
+/* ================= PYRAMID WRAPPER ================= */
 
 .pyramid-wrapper {
   padding: 30px;
@@ -354,6 +344,25 @@ body {
   backdrop-filter: blur(6px);
   max-width: 750px;
   margin: 0 auto;
+}
+
+/* ================= PYRAMID STACK (CENTERING FIX APPLIED) ================= */
+
+.pyramid-stack {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  gap: 25px;
+}
+
+/* Each layer centers its card + text perfectly */
+.pyramid-stack > div {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 /* ================= SCROLL-TRIGGERED ANIMATIONS ================= */
@@ -927,9 +936,4 @@ body {
   }
 }
 
-.pyramid-stack > div {
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
+
