@@ -936,4 +936,8 @@ body {
   }
 }
 
-
+.primary-btn {
+  display: inline-block;
+  margin-left: auto;
+  margin-right: auto;
+}
