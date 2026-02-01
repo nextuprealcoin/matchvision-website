@@ -335,6 +335,15 @@ body {
   opacity: 0.9;
 }
 
+/* Force perfect centering of all pyramid layers */
+.pyramid-stack {
+  display: flex;
+  flex-direction: column;
+  align-items: center !important;
+  justify-content: center;
+  width: 100%;
+}
+
 /* ================= PYRAMID GLOW OUTLINE WRAPPER ================= */
 
 .pyramid-wrapper {
