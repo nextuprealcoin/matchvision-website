@@ -13,6 +13,31 @@
   <meta property="og:url" content="https://www.futboliqacademy.com/decision-making.html" />
 
   <link rel="stylesheet" href="assets/css/styles.css">
+
+  <style>
+    /* Subtle animated border glow for image cards */
+    .glow-image-wrapper {
+      position: relative;
+      border-radius: 12px;
+      overflow: hidden;
+    }
+
+    .glow-image-wrapper::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      border-radius: 12px;
+      padding: 2px;
+      background: linear-gradient(135deg, #5b2cff, #1e90ff, #6a00ff);
+      background-size: 400% 400%;
+      animation: gradientShift 8s ease infinite;
+      -webkit-mask: 
+        linear-gradient(#fff 0 0) content-box, 
+        linear-gradient(#fff 0 0);
+      -webkit-mask-composite: xor;
+              mask-composite: exclude;
+    }
+  </style>
 </head>
 
 <body>
@@ -84,7 +109,7 @@
     </div>
   </section>
 
-   <!-- ================= DECISION-MAKING PYRAMID ================= -->
+    <!-- ================= DECISION-MAKING PYRAMID ================= -->
   <section class="section section-transition-bottom"
     style="
       position:relative;
@@ -270,13 +295,37 @@
 
       <h2>Decision-Making Under Pressure</h2>
 
-      <p class="wide-text">
-        Pressure exposes cognitive weaknesses. When time and space shrink, players with poor decision-making revert to instinct, panic, or predictable patterns. Elite players maintain clarity, adapt quickly, and continue to choose high-value options even in chaotic environments.
-      </p>
+      <div style="
+        display:flex;
+        flex-wrap:wrap;
+        gap:40px;
+        align-items:flex-start;
+        margin-top:30px;
+      ">
 
-      <p class="wide-text">
-        We train players to operate under pressure by simulating realistic constraints: limited time, reduced space, numerical disadvantages, and unpredictable stimuli. This builds cognitive resilience and improves decision quality in real match scenarios.
-      </p>
+        <!-- TEXT CARD -->
+        <div class="card glow-card" style="flex:1 1 480px; min-width:300px;">
+          <p class="wide-text">
+            Pressure exposes cognitive weaknesses. When time and space shrink, players with poor decision-making revert to instinct, panic, or predictable patterns. Elite players maintain clarity, adapt quickly, and continue to choose high-value options even in chaotic environments.
+          </p>
+
+          <p class="wide-text" style="margin-top:20px;">
+            We train players to operate under pressure by simulating realistic constraints: limited time, reduced space, numerical disadvantages, and unpredictable stimuli. This builds cognitive resilience and improves decision quality in real match scenarios.
+          </p>
+        </div>
+
+        <!-- IMAGE CARD WITH ANIMATED BORDER GLOW -->
+        <div class="card glow-card" style="flex:0 1 420px; min-width:280px; padding:0; background:none;">
+          <div class="glow-image-wrapper">
+            <img 
+              src="assets/images/futbol-iq-decision-making-pressure.png"
+              alt="Decision Making Under Pressure"
+              style="width:100%; height:auto; display:block; border-radius:12px;"
+            >
+          </div>
+        </div>
+
+      </div>
 
     </div>
   </section>
