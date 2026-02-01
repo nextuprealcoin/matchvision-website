@@ -13,69 +13,6 @@
   <meta property="og:url" content="https://www.futboliqacademy.com/decision-making.html" />
 
   <link rel="stylesheet" href="assets/css/styles.css">
-
-  <style>
-    /* Glow wrapper for images */
-    .glow-image-wrapper {
-      position: relative;
-      border-radius: 12px;
-      overflow: hidden;
-    }
-    .glow-image-wrapper::before {
-      content: "";
-      position: absolute;
-      inset: 0;
-      border-radius: 12px;
-      padding: 2px;
-      background: linear-gradient(135deg, #5b2cff, #1e90ff, #6a00ff);
-      background-size: 400% 400%;
-      animation: gradientShift 8s ease infinite;
-      -webkit-mask:
-        linear-gradient(#fff 0 0) content-box,
-        linear-gradient(#fff 0 0);
-      -webkit-mask-composite: xor;
-              mask-composite: exclude;
-    }
-
-    /* Minimal white line icons */
-    .pyramid-icon {
-      font-size: 1.4rem;
-      margin-bottom: 6px;
-      display: block;
-      opacity: 0.9;
-    }
-
-    /* Scroll-triggered animations */
-    .fade-up {
-      opacity: 0;
-      transform: translateY(30px);
-      transition: opacity 0.8s ease, transform 0.8s ease;
-    }
-    .fade-up.visible {
-      opacity: 1;
-      transform: translateY(0);
-    }
-
-    .fade-stagger {
-      opacity: 0;
-      transform: translateY(40px);
-      transition: opacity 0.9s ease, transform 0.9s ease;
-    }
-    .fade-stagger.visible {
-      opacity: 1;
-      transform: translateY(0);
-    }
-
-    .scale-in {
-      opacity: 0;
-      transform: scale(0.92);
-      transition: opacity 0.7s ease, transform 0.7s ease;
-    }
-    .scale-in.visible {
-      opacity: 1;
-      transform: scale(1);
-    }
-  </style>
 </head>
 
 <body>
@@ -197,34 +134,15 @@
         </p>
       </div>
 
-      <!-- PYRAMID WRAPPER WITH GLOW OUTLINE -->
-      <div class="fade-up" style="
-        padding:30px;
-        border-radius:16px;
-        border:2px solid rgba(255,255,255,0.25);
-        box-shadow:0 0 25px rgba(255,255,255,0.25);
-        backdrop-filter:blur(6px);
-        max-width:750px;
-        margin:0 auto;
-      ">
+      <!-- PYRAMID WRAPPER -->
+      <div class="pyramid-wrapper fade-up">
 
-        <!-- TRUE PYRAMID STRUCTURE -->
-        <div style="
-          display:flex;
-          flex-direction:column;
-          align-items:center;
-          gap:25px;
-        ">
+        <!-- PYRAMID STACK (CLEAN + CENTERED) -->
+        <div class="pyramid-stack">
 
           <!-- APEX -->
-          <div style="text-align:center;">
-            <div class="card glow-card fade-stagger" style="
-              width:260px;
-              text-align:center;
-              color:white;
-              font-weight:900;
-              background:rgba(255,255,255,0.18);
-            ">
+          <div>
+            <div class="card glow-card fade-stagger" style="width:260px;">
               <span class="pyramid-icon">⭐</span>
               Game Intelligence
             </div>
@@ -234,12 +152,8 @@
           </div>
 
           <!-- EXECUTION -->
-          <div style="text-align:center;">
-            <div class="card glow-card fade-stagger" style="
-              width:340px;
-              text-align:center;
-              color:white;
-            ">
+          <div>
+            <div class="card glow-card fade-stagger" style="width:340px;">
               <span class="pyramid-icon">⚡</span>
               Execution
             </div>
@@ -249,12 +163,8 @@
           </div>
 
           <!-- ACTION SELECTION -->
-          <div style="text-align:center;">
-            <div class="card glow-card fade-stagger" style="
-              width:420px;
-              text-align:center;
-              color:white;
-            ">
+          <div>
+            <div class="card glow-card fade-stagger" style="width:420px;">
               <span class="pyramid-icon">🎯</span>
               Action Selection
             </div>
@@ -264,12 +174,8 @@
           </div>
 
           <!-- INTERPRETATION -->
-          <div style="text-align:center;">
-            <div class="card glow-card fade-stagger" style="
-              width:500px;
-              text-align:center;
-              color:white;
-            ">
+          <div>
+            <div class="card glow-card fade-stagger" style="width:500px;">
               <span class="pyramid-icon">🧠</span>
               Interpretation
             </div>
@@ -278,13 +184,9 @@
             </p>
           </div>
 
-          <!-- PERCEPTION (BASE) -->
-          <div style="text-align:center;">
-            <div class="card glow-card fade-stagger" style="
-              width:580px;
-              text-align:center;
-              color:white;
-            ">
+          <!-- PERCEPTION -->
+          <div>
+            <div class="card glow-card fade-stagger" style="width:580px;">
               <span class="pyramid-icon">👁️</span>
               Perception
             </div>
@@ -294,7 +196,6 @@
           </div>
 
         </div>
-
       </div>
 
     </div>
@@ -325,7 +226,7 @@
           </p>
         </div>
 
-        <!-- IMAGE CARD WITH ANIMATED BORDER GLOW -->
+        <!-- IMAGE CARD -->
         <div class="card glow-card fade-up" style="flex:0 1 420px; min-width:280px; padding:0; background:none;">
           <div class="glow-image-wrapper">
             <img 
@@ -413,47 +314,27 @@
       <!-- TEXT GRID WITH ANIMATED GRADIENT BACKGROUND -->
       <div class="card-grid" style="margin-top:10px;">
 
-        <div class="card glow-card scale-in" style="
-          background:linear-gradient(135deg, #5b2cff, #1e90ff, #6a00ff);
-          background-size:400% 400%;
-          animation:gradientShift 12s ease infinite;
-        ">
+        <div class="card glow-card scale-in mistake-card">
           <h3>Ball Watching</h3>
           <p>Failing to scan or track opponents leads to slow reactions and poor positioning.</p>
         </div>
 
-        <div class="card glow-card scale-in" style="
-          background:linear-gradient(135deg, #5b2cff, #1e90ff, #6a00ff);
-          background-size:400% 400%;
-          animation:gradientShift 12s ease infinite;
-        ">
+        <div class="card glow-card scale-in mistake-card">
           <h3>Predictable Choices</h3>
           <p>Players who repeat the same patterns become easy to defend.</p>
         </div>
 
-        <div class="card glow-card scale-in" style="
-          background:linear-gradient(135deg, #5b2cff, #1e90ff, #6a00ff);
-          background-size:400% 400%;
-          animation:gradientShift 12s ease infinite;
-        ">
+        <div class="card glow-card scale-in mistake-card">
           <h3>Late Decisions</h3>
           <p>Slow cognitive processing results in rushed or low-quality actions.</p>
         </div>
 
-        <div class="card glow-card scale-in" style="
-          background:linear-gradient(135deg, #5b2cff, #1e90ff, #6a00ff);
-          background-size:400% 400%;
-          animation:gradientShift 12s ease infinite;
-        ">
+        <div class="card glow-card scale-in mistake-card">
           <h3>Misreading Pressure</h3>
           <p>Incorrectly judging time and space leads to turnovers and poor risk management.</p>
         </div>
 
-        <div class="card glow-card scale-in" style="
-          background:linear-gradient(135deg, #5b2cff, #1e90ff, #6a00ff);
-          background-size:400% 400%;
-          animation:gradientShift 12s ease infinite;
-        ">
+        <div class="card glow-card scale-in mistake-card">
           <h3>Many Other Mistakes</h3>
           <p>
             Players make dozens of subtle cognitive errors. We identify them, isolate them,
@@ -536,4 +417,3 @@
 
 </body>
 </html>
-
