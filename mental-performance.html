@@ -54,12 +54,13 @@
   </section>
 
   <!-- ================= STRENGTHEN YOUR MENTAL GAME ================= -->
-  <section class="section solana-divider-dark section-transition-bottom">
-    <div class="container split-layout fade-up">
+  <section class="section solana-divider-dark section-transition-bottom fade-up">
+    <div class="container split-layout">
 
-      <!-- TEXT -->
-      <div>
+      <!-- TEXT CARD -->
+      <div class="card glow-card fade-up">
         <h2>Strengthen Your Mental Game</h2>
+
         <p class="wide-text">
           Mental performance is no longer a “soft skill” — it is a measurable competitive advantage. Modern players operate in 
           environments defined by high-speed decision cycles, constant information overload, tactical fluidity, and pressure-based 
@@ -68,15 +69,15 @@
           phases of play.
         </p>
 
-        <p class="wide-text">
+        <p class="wide-text" style="margin-top:20px;">
           Two players with identical technical ability can produce completely different match outcomes depending on how they process 
           information, manage stress, recover from mistakes, and maintain clarity under pressure. Mental performance is the multiplier 
           that amplifies technical, tactical, and physical ability — and it is now a core pillar of elite development.
         </p>
       </div>
 
-      <!-- IMAGE -->
-      <div class="visual-block fade-up">
+      <!-- IMAGE CARD -->
+      <div class="card glow-card fade-up" style="padding:0;">
         <div class="glow-image-wrapper">
           <img src="assets/images/futbol-iq-metnal.JPG"
                alt="Mental Performance Training" />
@@ -86,7 +87,7 @@
     </div>
   </section>
 
-  <!-- ================= MENTAL PERFORMANCE IMPACT CURVE ================= -->
+    <!-- ================= MENTAL PERFORMANCE IMPACT CURVE ================= -->
   <section class="section gradient-intelligence section-transition-bottom fade-up">
     <div class="container center">
 
@@ -97,12 +98,11 @@
         resilience, decision speed, and overall match influence.
       </p>
 
-      <!-- Line Chart Diagram -->
+      <!-- Chart Container -->
       <div class="fade-up" style="margin-top:60px; max-width:1100px; margin-left:auto; margin-right:auto;">
-        <canvas id="mentalChart" style="height:420px;"></canvas>
+        <canvas id="mentalPerformanceChart" style="height:420px;"></canvas>
       </div>
 
-      <!-- AXIS CAPTIONS -->
       <p class="wide-text fade-up" style="opacity:0.75; margin-top:20px;">
         <strong>X‑Axis:</strong> Match Time (minutes 0–90)  
         &nbsp;•&nbsp;  
@@ -116,8 +116,8 @@
   <section class="section solana-divider-dark section-transition-bottom fade-up">
     <div class="container split-layout">
 
-      <!-- TEXT COLUMN -->
-      <div class="fade-up">
+      <!-- TEXT CARD -->
+      <div class="card glow-card fade-up">
         <h2>Key Topics in Mental Performance</h2>
 
         <p class="wide-text">
@@ -137,8 +137,8 @@
         </ul>
       </div>
 
-      <!-- IMAGE COLUMN -->
-      <div class="visual-block fade-up">
+      <!-- IMAGE CARD -->
+      <div class="card glow-card fade-up" style="padding:0;">
         <div class="glow-image-wrapper">
           <img 
             src="assets/images/futbol-iq-mentaldev.png"
@@ -195,8 +195,8 @@
 
     </div>
   </section>
-  
-  <!-- ================= CTA SECTION (CENTERED BUTTON) ================= -->
+
+    <!-- ================= CTA SECTION (CENTERED BUTTON) ================= -->
   <section class="section gradient-services section-transition-blend fade-up">
     <div class="container center">
       <h2 class="fade-up">Develop Your Mental Edge</h2>
@@ -214,12 +214,12 @@
     © 2026 Futbol IQ Academy. All rights reserved.
   </footer>
 
-  <!-- ================= SCRIPTS ================= -->
+  <!-- ================= CHART.JS ================= -->
   <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 
   <script>
     /* Mental Performance Impact Curve Chart */
-    const ctx = document.getElementById('mentalChart');
+    const ctx = document.getElementById('mentalPerformanceChart');
 
     if (ctx) {
       new Chart(ctx, {
