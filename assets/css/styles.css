@@ -8,16 +8,14 @@
   padding: 0;
 }
 
-html,
-body {
+html, body {
   height: 100%;
 }
 
 body {
-  font-family: system-ui, -apple-system, BlinkMacSystemFont, "SF Pro Text",
-    "Segoe UI", sans-serif;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "SF Pro Text", "Segoe UI", sans-serif;
   background: #02030a;
-  color: #f5f5f5;
+  color: #ffffff;
   font-size: 1.18rem;
   line-height: 1.75;
   -webkit-font-smoothing: antialiased;
@@ -37,27 +35,7 @@ body {
   position: relative;
 }
 
-/* ================= UNIFIED SECTION TITLES ================= */
-
-.section h2 {
-  text-align: center;
-  font-size: 3rem;
-  font-weight: 900;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
-  margin-bottom: 50px;
-
-  opacity: 0;
-  transform: translateY(20px);
-  animation: fadeInUp 1.2s ease-out forwards;
-}
-
-@keyframes fadeInUp {
-  0% { opacity: 0; transform: translateY(20px); }
-  100% { opacity: 1; transform: translateY(0); }
-}
-
-/* ================= GLOBAL TEXT UPGRADE ================= */
+/* ================= TEXT VISIBILITY FIX ================= */
 
 .section p,
 .section .wide-text,
@@ -67,22 +45,54 @@ body {
   margin-right: auto;
   font-size: 1.25rem;
   max-width: 850px;
-  color: #d1d5db;
+  color: #f5f5f5; /* FIXED: full visibility */
 }
 
 .text-block {
   text-align: center;
 }
 
-.faq-item p {
-  font-size: 1.2rem;
-  line-height: 1.7;
+/* ================= SECTION TITLES ================= */
+
+.section h2 {
   text-align: center;
+  font-size: 3rem;
+  font-weight: 900;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  margin-bottom: 50px;
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.9s ease, transform 0.9s ease;
 }
 
-.chart-card h3 {
-  font-size: 1.35rem;
-  text-align: center;
+.section h2.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* ================= SCROLL ANIMATIONS ================= */
+
+.fade-up {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.fade-up.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.scale-in {
+  opacity: 0;
+  transform: scale(0.92);
+  transition: opacity 0.7s ease, transform 0.7s ease;
+}
+
+.scale-in.visible {
+  opacity: 1;
+  transform: scale(1);
 }
 
 /* ================= NAVBAR ================= */
@@ -103,19 +113,18 @@ body {
   padding: 14px 20px;
 }
 
-.navbar-brand {
+.logo-container {
   display: flex;
   align-items: center;
   gap: 10px;
 }
 
-.navbar-brand h3 {
-  font-size: 1.2rem;
-  letter-spacing: 1px;
-  text-transform: uppercase;
+.logo {
+  height: 42px;
+  width: auto;
 }
 
-.navbar-menu {
+.nav-links {
   display: flex;
   gap: 20px;
 }
@@ -156,39 +165,25 @@ body {
   text-align: center;
 }
 
-.hero-topline {
-  font-size: 1.1rem;
-  letter-spacing: 0.18em;
-  text-transform: uppercase;
-  color: #9ca3af;
-  margin-bottom: 18px;
-}
-
 .hero-main-headline {
   font-size: clamp(3.2rem, 4vw, 4rem);
   font-weight: 900;
   letter-spacing: 0.08em;
   text-transform: uppercase;
   margin-bottom: 18px;
+  color: #ffffff;
 }
 
 .hero-subline {
   max-width: 700px;
   margin: 0 auto 28px;
-  color: #d1d5db;
+  color: #e5e5e5;
   font-size: 1.25rem;
-}
-
-.hero-buttons {
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
 }
 
 /* ================= BUTTONS ================= */
 
-.primary-btn,
-.secondary-btn {
+.primary-btn {
   display: inline-flex;
   align-items: center;
   justify-content: center;
@@ -200,18 +195,15 @@ body {
   text-decoration: none;
   cursor: pointer;
   border: none;
-
   color: #02030a;
   background: linear-gradient(135deg, #ff0000, #ffffff, #0000ff);
   background-size: 300% 300%;
   animation: usaGradient 6s ease infinite;
-
   box-shadow: 0 0 18px rgba(255, 255, 255, 0.25);
   transition: transform 0.18s ease, box-shadow 0.18s ease;
 }
 
-.primary-btn:hover,
-.secondary-btn:hover {
+.primary-btn:hover {
   transform: translateY(-2px);
   box-shadow: 0 0 26px rgba(255, 255, 255, 0.45);
 }
@@ -222,53 +214,7 @@ body {
   100% { background-position: 0% 0%; }
 }
 
-/* ================= SECTION BACKGROUNDS ================= */
-
-.solana-divider {
-  background: radial-gradient(circle at top left, #0b1f3b, #02030a 55%, #000000);
-}
-
-.solana-divider-dark {
-  background: radial-gradient(circle at top right, #020617, #02030a 55%, #000000);
-}
-
-.gradient-intelligence {
-  background: radial-gradient(circle at top, #0f172a, #02030a 60%, #000000);
-}
-
-.gradient-services {
-  background: radial-gradient(circle at top left, #020617, #02030a 55%, #000000);
-}
-
-.gradient-contact-strong {
-  background: radial-gradient(circle at top, #111827, #02030a 60%, #000000);
-}
-
-/* ================= GLOW IMAGE WRAPPER ================= */
-
-.glow-image-wrapper {
-  position: relative;
-  border-radius: 12px;
-  overflow: hidden;
-}
-
-.glow-image-wrapper::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  border-radius: 12px;
-  padding: 2px;
-  background: linear-gradient(135deg, #5b2cff, #1e90ff, #6a00ff);
-  background-size: 400% 400%;
-  animation: gradientShift 8s ease infinite;
-  -webkit-mask:
-    linear-gradient(#fff 0 0) content-box,
-    linear-gradient(#fff 0 0);
-  -webkit-mask-composite: xor;
-          mask-composite: exclude;
-}
-
-/* ================= UNIFIED GLOWING CARDS ================= */
+/* ================= UNIFIED GLOW CARDS ================= */
 
 .card,
 .card-link {
@@ -308,104 +254,13 @@ body {
   color: #ffffff;
 }
 
-/* ================= CARD GRID (RESPONSIVE) ================= */
+/* ================= CARD GRID ================= */
 
 .card-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
   gap: 28px;
   margin-top: 40px;
-}
-
-/* ================= MISTAKE CARD ANIMATED BACKGROUND ================= */
-
-.mistake-card {
-  background: linear-gradient(135deg, #5b2cff, #1e90ff, #6a00ff);
-  background-size: 400% 400%;
-  animation: gradientShift 12s ease infinite;
-}
-
-/* ================= PYRAMID ICONS ================= */
-
-.pyramid-icon {
-  font-size: 1.4rem;
-  margin-bottom: 6px;
-  display: block;
-  opacity: 0.9;
-}
-
-/* ================= PYRAMID WRAPPER ================= */
-
-.pyramid-wrapper {
-  padding: 30px;
-  border-radius: 16px;
-  border: 2px solid rgba(255,255,255,0.25);
-  box-shadow: 0 0 25px rgba(255,255,255,0.25);
-  backdrop-filter: blur(6px);
-  max-width: 750px;
-  margin: 0 auto;
-}
-
-/* ================= PYRAMID STACK (CENTERING FIX APPLIED) ================= */
-
-.pyramid-stack {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  width: 100%;
-  gap: 25px;
-}
-
-/* Each layer centers its card + text perfectly */
-.pyramid-stack > div {
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-/* ================= SCROLL-TRIGGERED ANIMATIONS ================= */
-
-.fade-up {
-  opacity: 0;
-  transform: translateY(30px);
-  transition: opacity 0.8s ease, transform 0.8s ease;
-}
-
-.fade-up.visible {
-  opacity: 1;
-  transform: translateY(0);
-}
-
-.fade-stagger {
-  opacity: 0;
-  transform: translateY(40px);
-  transition: opacity 0.9s ease, transform 0.9s ease;
-}
-
-.fade-stagger.visible {
-  opacity: 1;
-  transform: translateY(0);
-}
-
-.scale-in {
-  opacity: 0;
-  transform: scale(0.92);
-  transition: opacity 0.7s ease, transform 0.7s ease;
-}
-
-.scale-in.visible {
-  opacity: 1;
-  transform: scale(1);
-}
-
-/* ================= GRADIENT SHIFT KEYFRAME ================= */
-
-@keyframes gradientShift {
-  0% { background-position: 0% 0%; }
-  50% { background-position: 100% 100%; }
-  100% { background-position: 0% 0%; }
 }
 
 /* ================= SPLIT LAYOUT ================= */
@@ -447,119 +302,58 @@ body {
   object-fit: cover;
 }
 
-/* ================= PLAYER DEVELOPMENT HUB ================= */
+/* ================= GLOW IMAGE WRAPPER ================= */
 
-.player-hub-gradient {
-  width: 100vw;
-  margin-left: calc(50% - 50vw);
-  margin-right: calc(50% - 50vw);
-
-  padding: 100px 0;
-  background: linear-gradient(
-    135deg,
-    rgba(255, 0, 0, 0.25),
-    rgba(255, 255, 255, 0.25),
-    rgba(0, 0, 255, 0.25)
-  );
-  background-size: 300% 300%;
-  animation: hubGradientShift 12s ease-in-out infinite;
+.glow-image-wrapper {
+  position: relative;
+  border-radius: 12px;
+  overflow: hidden;
 }
 
-@keyframes hubGradientShift {
+.glow-image-wrapper::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: 12px;
+  padding: 2px;
+  background: linear-gradient(135deg, #5b2cff, #1e90ff, #6a00ff);
+  background-size: 400% 400%;
+  animation: gradientShift 8s ease infinite;
+  -webkit-mask:
+    linear-gradient(#fff 0 0) content-box,
+    linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+          mask-composite: exclude;
+}
+
+/* ================= SECTION BACKGROUNDS ================= */
+
+.solana-divider {
+  background: radial-gradient(circle at top left, #0b1f3b, #02030a 55%, #000000);
+}
+
+.solana-divider-dark {
+  background: radial-gradient(circle at top right, #020617, #02030a 55%, #000000);
+}
+
+.gradient-intelligence {
+  background: radial-gradient(circle at top, #0f172a, #02030a 60%, #000000);
+}
+
+.gradient-services {
+  background: radial-gradient(circle at top left, #020617, #02030a 55%, #000000);
+}
+
+.gradient-contact-strong {
+  background: radial-gradient(circle at top, #111827, #02030a 60%, #000000);
+}
+
+/* ================= GRADIENT SHIFT KEYFRAME ================= */
+
+@keyframes gradientShift {
   0% { background-position: 0% 0%; }
   50% { background-position: 100% 100%; }
   100% { background-position: 0% 0%; }
-}
-
-/* ================= FAQ ================= */
-
-.faq-grid {
-  display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 28px;
-  margin-top: 40px;
-}
-
-.faq-item {
-  background: radial-gradient(circle at top, #020617, #02030a);
-  border-radius: 18px;
-  padding: 26px 22px 30px;
-  border: 1px solid rgba(148, 163, 184, 0.35);
-}
-
-.faq-item h3 {
-  font-size: 1.3rem;
-  margin-bottom: 12px;
-}
-
-/* ================= CONTACT FORM ================= */
-
-.contact-form {
-  margin-top: 30px;
-  display: flex;
-  flex-direction: column;
-  gap: 16px;
-}
-
-.contact-form input,
-.contact-form textarea {
-  width: 100%;
-  padding: 14px 16px;
-  border-radius: 10px;
-  border: 1px solid rgba(148, 163, 184, 0.6);
-  background: rgba(15, 23, 42, 0.9);
-  color: #e5e7eb;
-  font-size: 1.1rem;
-}
-
-.contact-form textarea {
-  min-height: 140px;
-  resize: vertical;
-}
-
-.contact-form input:focus,
-.contact-form textarea:focus {
-  outline: none;
-  border-color: #00eaff;
-  box-shadow: 0 0 0 1px rgba(0, 234, 255, 0.4);
-}
-
-/* ================= INSPIRATION BANNER ================= */
-
-.inspiration-banner {
-  width: 100vw;
-  margin-left: calc(50% - 50vw);
-  margin-right: calc(50% - 50vw);
-
-  padding: 180px 20px;
-  background: #000;
-
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-}
-
-.inspiration-banner h1 {
-  font-size: clamp(4rem, 10vw, 10rem);
-  font-weight: 900;
-  letter-spacing: 6px;
-  margin: 0;
-  text-transform: uppercase;
-  white-space: nowrap;
-  display: inline-block;
-
-  background: linear-gradient(135deg, #00eaff, #ffffff, #ff7b00);
-  background-size: 300% 300%;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-
-  text-shadow:
-    0 0 35px rgba(0, 234, 255, 0.35),
-    0 0 55px rgba(255, 255, 255, 0.25),
-    0 0 75px rgba(255, 123, 0, 0.25);
-
-  animation: gradientShift 6s ease-in-out infinite;
 }
 
 /* ================= TIMELINE ================= */
@@ -679,6 +473,38 @@ body {
   }
 }
 
+/* ================= PYRAMID ================= */
+
+.pyramid-wrapper {
+  padding: 30px;
+  border-radius: 16px;
+  border: 2px solid rgba(255,255,255,0.25);
+  box-shadow: 0 0 25px rgba(255,255,255,0.25);
+  backdrop-filter: blur(6px);
+  max-width: 750px;
+  margin: 0 auto;
+}
+
+.pyramid-stack {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 25px;
+}
+
+.pyramid-stack > div {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.pyramid-icon {
+  font-size: 1.4rem;
+  margin-bottom: 6px;
+  opacity: 0.9;
+}
+
 /* ================= TECHNICAL DEVELOPMENT MODEL ================= */
 
 .model-card {
@@ -732,7 +558,7 @@ body {
   }
 }
 
-/* ================= PRICING SECTION ================= */
+/* ================= PRICING ================= */
 
 #standard-pricing .card-grid {
   grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -810,53 +636,63 @@ body {
   text-align: center;
 }
 
-/* ================= IMAGE CARD GLOW ================= */
+/* ================= FAQ ================= */
 
-.card-grid .card img {
-  animation: cognitiveGlow 4s ease-in-out infinite alternate;
+.faq-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 28px;
+  margin-top: 40px;
 }
 
-@keyframes cognitiveGlow {
-  0% { box-shadow: 0 0 18px rgba(255, 0, 60, 0.35); }
-  100% { box-shadow: 0 0 22px rgba(0, 102, 255, 0.35); }
-}
-
-/* ================= TECHDEV IMAGE CARD ================= */
-
-.techdev-image-card {
-  padding: 0;
-  overflow: hidden;
+.faq-item {
+  background: radial-gradient(circle at top, #020617, #02030a);
   border-radius: 18px;
-  position: relative;
-  animation: techdevGlow 5s ease-in-out infinite alternate;
+  padding: 26px 22px 30px;
+  border: 1px solid rgba(148, 163, 184, 0.35);
 }
 
-.techdev-image-card:hover {
-  transform: translateY(-6px);
-  box-shadow:
-    0 0 25px rgba(255,255,255,0.25),
-    0 0 45px rgba(0,0,0,0.9);
+.faq-item h3 {
+  font-size: 1.3rem;
+  margin-bottom: 12px;
 }
 
-.techdev-image {
+.faq-item p {
+  font-size: 1.2rem;
+  line-height: 1.7;
+  text-align: center;
+}
+
+/* ================= CONTACT FORM ================= */
+
+.contact-form {
+  margin-top: 30px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.contact-form input,
+.contact-form textarea {
   width: 100%;
-  height: auto;
-  display: block;
-  object-fit: cover;
-  border-radius: 18px;
+  padding: 14px 16px;
+  border-radius: 10px;
+  border: 1px solid rgba(148, 163, 184, 0.6);
+  background: rgba(15, 23, 42, 0.9);
+  color: #e5e7eb;
+  font-size: 1.1rem;
 }
 
-@keyframes techdevGlow {
-  0% {
-    box-shadow: 
-      0 0 20px rgba(255, 0, 60, 0.35),
-      0 0 30px rgba(0, 102, 255, 0.25);
-  }
-  100% {
-    box-shadow: 
-      0 0 25px rgba(0, 102, 255, 0.35),
-      0 0 35px rgba(255, 0, 60, 0.25);
-  }
+.contact-form textarea {
+  min-height: 140px;
+  resize: vertical;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+  outline: none;
+  border-color: #00eaff;
+  box-shadow: 0 0 0 1px rgba(0, 234, 255, 0.4);
 }
 
 /* ================= FOOTER ================= */
@@ -868,81 +704,4 @@ body {
   color: #9ca3af;
   background: #02030a;
   border-top: 1px solid rgba(148, 163, 184, 0.25);
-}
-
-/* ================= RESPONSIVE OVERRIDES ================= */
-
-@media (max-width: 960px) {
-  .split-layout,
-  .split-layout.reverse {
-    grid-template-columns: minmax(0, 1fr);
-  }
-
-  .visual-block {
-    order: -1;
-  }
-
-  .card-grid {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-  }
-
-  .chart-grid {
-    grid-template-columns: minmax(0, 1fr);
-  }
-
-  .faq-grid {
-    grid-template-columns: minmax(0, 1fr);
-  }
-
-  .inspiration-banner {
-    padding: 140px 16px;
-  }
-
-  .inspiration-banner h1 {
-    letter-spacing: 3px;
-  }
-}
-
-@media (max-width: 640px) {
-  .navbar .container {
-    flex-direction: column;
-    gap: 10px;
-  }
-
-  .navbar-menu {
-    gap: 14px;
-  }
-
-  .hero-main-headline {
-    font-size: 2.6rem;
-  }
-
-  .section {
-    padding: 60px 0;
-  }
-
-  .card-grid {
-    grid-template-columns: minmax(0, 1fr);
-  }
-
-  .inspiration-banner {
-    padding: 110px 12px;
-  }
-
-  .inspiration-banner h1 {
-    font-size: 2.4rem;
-    letter-spacing: 2px;
-    white-space: normal;
-  }
-}
-
-.primary-btn {
-  display: inline-block;
-  margin-left: auto;
-  margin-right: auto;
-}
-
-.logo {
-  height: 42px;
-  width: auto;
 }
