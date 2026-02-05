@@ -18,37 +18,39 @@
 
 <body>
 
-  <!-- ================= NAVIGATION (FIQA STANDARD) ================= -->
-  <nav class="navbar container fade-up">
-    <div class="navbar-brand">
-      <img src="assets/images/futbol-iq-logo.png" class="logo" alt="Futbol IQ Academy Logo" />
-      <h3>Futbol <span style="color:#ff0000;">IQ</span> Academy</h3>
-    </div>
+  <!-- ================= NAVIGATION (USING YOUR EXISTING STRUCTURE) ================= -->
+  <nav class="navbar">
+    <div class="container">
+      <div class="logo-container">
+        <img src="assets/images/futbol-iq-logo.png" class="logo" alt="Futbol IQ Academy Logo" />
+        <h3>Futbol <span style="color:#ff0000;">IQ</span> Academy</h3>
+      </div>
 
-    <div class="navbar-menu desktop-only">
-      <a href="index.html" class="nav-link">Home</a>
-      <a href="index.html#intelligence" class="nav-link">Player Intelligence</a>
-      <a href="player-development.html" class="nav-link">Player Development</a>
-      <a href="index.html#pricing" class="nav-link">Match Analysis</a>
-      <a href="index.html#contact" class="nav-link">Contact</a>
-    </div>
+      <div class="nav-links desktop-only">
+        <a class="nav-link" href="index.html#intelligence">Player Intelligence</a>
+        <a class="nav-link" href="player-development.html">Player Development</a>
+        <a class="nav-link" href="index.html#pricing">Match Analysis</a>
+        <a class="nav-link" href="index.html#contact">Contact</a>
+      </div>
 
-    <button class="mobile-menu-btn mobile-only">☰</button>
+      <button class="mobile-menu-btn mobile-only">☰</button>
+    </div>
   </nav>
 
-  <!-- ================= HERO (ANIMATED GRADIENT) ================= -->
-  <header class="hero gradient-hero section-transition-bottom fade-up">
-    <div class="container hero-content center fade-up">
+  <!-- ================= HERO (USING YOUR EXISTING HERO CLASSES) ================= -->
+  <header class="gradient-hero">
+    <div class="container hero-content fade-up">
       <h1 class="hero-main-headline">College Recruiting</h1>
       <p class="hero-subline">Data‑Driven Guidance for the Next Level</p>
     </div>
   </header>
 
   <!-- ================= TRANSITION INTO HEADER IMAGE ================= -->
-  <section class="section section-transition-bottom"></section>
+  <section class="section"></section>
 
   <!-- ================= FULL-WIDTH HEADER IMAGE WITH ANIMATED GRADIENT ================= -->
-  <section class="section section-transition-bottom" style="padding:0; margin:0; position:relative; overflow:hidden;">
+  <section class="section" style="padding:0; margin:0; position:relative; overflow:hidden;">
+    
     <!-- Background Image -->
     <div style="
       width:100%;
@@ -76,13 +78,15 @@
       background-size:300% 300%;
       animation: headerGradientShift 12s ease-in-out infinite;
     "></div>
+
   </section>
 
-  <!-- ================= OVERVIEW SECTION (MODERNIZED) ================= -->
-  <section class="section solana-divider-dark section-transition-bottom fade-up">
+  <!-- ================= OVERVIEW SECTION (MODERNIZED TO MATCH YOUR CSS) ================= -->
+  <section class="section solana-divider-dark fade-up">
     <div class="container center">
-      <h2 class="section-title">Understanding the College Soccer Landscape</h2>
-      <p class="wide-text" style="max-width:900px; margin:auto;">
+      <h2>Understanding the College Soccer Landscape</h2>
+
+      <p class="wide-text">
         The college recruiting process is more competitive than ever. With thousands of high school players pursuing limited roster 
         spots, families need clarity, strategy, and accurate data to navigate the journey. Our approach blends real recruiting 
         analytics, NCAA trends, and personalized guidance to help players position themselves for success.
@@ -90,6 +94,8 @@
     </div>
 
     <div class="container split-layout" style="margin-top:60px;">
+      
+      <!-- LEFT CARD -->
       <div class="card glow-card fade-up">
         <h3>A Smarter Way to Navigate College Recruiting</h3>
         <p class="wide-text">
@@ -99,6 +105,7 @@
         </p>
       </div>
 
+      <!-- RIGHT IMAGE CARD -->
       <div class="card glow-card fade-up">
         <img 
           src="assets/images/futbol-iq-college.png"
@@ -106,14 +113,16 @@
           style="width:100%; border-radius:12px;"
         />
       </div>
+
     </div>
   </section>
 
-  <!-- ================= PIE CHART SECTION ================= -->
-  <section class="section gradient-technical-model section-transition-bottom fade-up">
+    <!-- ================= PIE CHART SECTION ================= -->
+  <section class="section gradient-intelligence fade-up">
     <div class="container center">
       <h2>College Soccer Pathway Breakdown</h2>
-      <p class="wide-text" style="max-width:800px; margin:auto;">
+
+      <p class="wide-text">
         A five‑year snapshot of the college soccer pipeline — from total potential players to those who earn athletic scholarships.
       </p>
 
@@ -127,84 +136,81 @@
     </div>
   </section>
 
-  <!-- ================= WHY PLAYERS STRUGGLE ================= -->
-  <section class="section solana-divider-dark section-transition-bottom fade-up">
+  <!-- ================= WHY PLAYERS STRUGGLE (FIQA GLOW-CARD GRID) ================= -->
+  <section class="section solana-divider-dark fade-up">
     <div class="container center" style="max-width:1100px;">
-      <h2 class="section-title">Why So Many Players Never Reach College or Professional Levels</h2>
+      <h2>Why So Many Players Never Reach College or Professional Levels</h2>
 
-      <p class="wide-text" style="max-width:900px; margin:auto;">
+      <p class="wide-text">
         Despite years of training, competition, and commitment, the majority of youth players never transition into college or 
         professional soccer. The issue isn’t talent — it’s the lack of a structured pathway, strategic guidance, and understanding 
-        of the hidden layers of development and recruiting. Without clarity, families make decisions too late, players train the 
-        wrong areas, and coaches lack the bandwidth to guide every individual. The result is predictable: frustration, burnout, 
-        and missed opportunities.
+        of the hidden layers of development and recruiting.
       </p>
 
-      <div class="floating-cards-grid" style="margin-top:50px;">
-        <div class="floating-card">
+      <div class="card-grid" style="margin-top:50px;">
+
+        <div class="card glow-card fade-up">
           <h3>Late Understanding of the Recruiting Timeline</h3>
           <p>Most families don’t realize the process starts years before they expect — often by freshman year.</p>
         </div>
 
-        <div class="floating-card">
+        <div class="card glow-card fade-up">
           <h3>Lack of Tactical & Cognitive Development</h3>
           <p>Players train technically but rarely develop the decision‑making and intelligence college coaches prioritize.</p>
         </div>
 
-        <div class="floating-card">
+        <div class="card glow-card fade-up">
           <h3>Poor Highlight Video Structure</h3>
           <p>Most highlight videos fail to show real value, leading coaches to skip over talented players.</p>
         </div>
 
-        <div class="floating-card">
+        <div class="card glow-card fade-up">
           <h3>No Strategy for Coach Communication</h3>
           <p>Players don’t know what to say, when to say it, or how to stand out in a crowded inbox.</p>
         </div>
 
-        <div class="floating-card">
+        <div class="card glow-card fade-up">
           <h3>Unclear Program Fit</h3>
           <p>Families chase big‑name schools instead of identifying the right athletic, academic, and cultural fit.</p>
         </div>
 
-        <div class="floating-card">
+        <div class="card glow-card fade-up">
           <h3>Zero Guidance on Scholarship Pathways</h3>
           <p>Most players don’t understand scholarship tiers, negotiations, or how limited athletic money truly is.</p>
         </div>
+
       </div>
 
-      <p class="wide-text center" style="margin-top:40px; max-width:900px; margin:auto;">
-        Futbol IQ Academy was built to solve these problems. We provide a modern, data‑driven system that gives players, parents, 
-        and coaches the clarity they’ve never had — replacing guesswork with a proven pathway.
+      <p class="wide-text" style="margin-top:40px;">
+        Futbol IQ Academy was built to solve these problems — replacing guesswork with a proven, modern, data‑driven pathway.
       </p>
     </div>
   </section>
 
   <!-- ================= RECRUITING SKILLS TRAINING GRID ================= -->
-  <section class="section gradient-animated section-transition-bottom fade-up" style="background:#0a0f1f;">
+  <section class="section gradient-services fade-up">
     <div class="container center">
 
-      <h2 class="section-title fade-up">Recruiting Skills Training Grid</h2>
+      <h2>Recruiting Skills Training Grid</h2>
 
-      <p class="wide-text fade-up" style="max-width:900px; margin:auto;">
+      <p class="wide-text">
         The Recruiting Skills Training Grid breaks the entire recruiting journey into clear, trainable components. Instead of guessing 
         what matters or reacting too late, players learn the exact skills that drive exposure, communication, evaluation, and 
         opportunity — all structured into a roadmap they can follow with confidence.
       </p>
 
-      <p class="wide-text fade-up" style="max-width:900px; margin:20px auto 0;">
-        Each skill in the grid directly impacts a player's ability to stand out: stronger communication, smarter highlight videos, 
-        better academic positioning, clearer program fit, and a deeper understanding of what college coaches actually evaluate. 
-        When players master these skills, their recruiting outcomes improve dramatically — more responses, more interest, more 
-        opportunities.
+      <p class="wide-text" style="margin-top:20px;">
+        Each skill directly impacts a player's ability to stand out: stronger communication, smarter highlight videos, better academic 
+        positioning, clearer program fit, and a deeper understanding of what college coaches actually evaluate.
       </p>
 
-      <p class="wide-text fade-up" style="max-width:900px; margin:20px auto 0;">
+      <p class="wide-text" style="margin-top:20px;">
         Through our proprietary FIQA Recruiting Intelligence System, players gain access to structured training that accelerates 
-        their recruiting readiness. This system helps players build the clarity, confidence, and strategy needed to unlock college 
-        pathways that once felt out of reach.
+        their recruiting readiness — building clarity, confidence, and strategy.
       </p>
 
-      <div class="card-grid fade-up" style="margin-top:50px;">
+      <div class="card-grid" style="margin-top:50px;">
+
         <div class="card glow-card scale-in">
           <h3>Recruiting Timeline Mastery</h3>
           <p>Understanding key milestones from freshman year to signing day.</p>
@@ -244,57 +250,62 @@
           <h3>Recruiting Decision‑Making</h3>
           <p>Evaluating offers, communication, and long‑term fit with clarity.</p>
         </div>
+
       </div>
 
     </div>
   </section>
 
-  <!-- ================= FEATURED RECRUITING MODULES (MODERNIZED) ================= -->
-  <section class="section gradient-recruiting-animated section-transition-bottom fade-up">
+    <!-- ================= FEATURED RECRUITING MODULES ================= -->
+  <section class="section gradient-services fade-up">
     <div class="container center">
-      <h2 class="section-title">Featured Recruiting Modules</h2>
-      <p class="wide-text" style="max-width:800px; margin:auto;">
+      <h2>Featured Recruiting Modules</h2>
+
+      <p class="wide-text">
         Explore structured, data‑driven modules designed to help players navigate the recruiting process with clarity and confidence.
       </p>
 
       <div class="card-grid" style="margin-top:40px;">
-        <div class="card glow-card">
+
+        <div class="card glow-card fade-up">
           <h3>Recruiting Timeline</h3>
           <p>Understand key milestones from freshman year to signing day.</p>
         </div>
 
-        <div class="card glow-card">
+        <div class="card glow-card fade-up">
           <h3>Highlight Video Strategy</h3>
           <p>Create a standout highlight reel that captures coaches’ attention.</p>
         </div>
 
-        <div class="card glow-card">
+        <div class="card glow-card fade-up">
           <h3>Coach Communication Templates</h3>
           <p>Use proven email scripts and messaging frameworks to reach coaches.</p>
         </div>
 
-        <div class="card glow-card">
+        <div class="card glow-card fade-up">
           <h3>Academic Positioning</h3>
           <p>Learn how GPA, test scores, and transcripts impact recruiting.</p>
         </div>
 
-        <div class="card glow-card">
+        <div class="card glow-card fade-up">
           <h3>Program Fit Analysis</h3>
           <p>Identify the right athletic, academic, and cultural fit for your goals.</p>
         </div>
 
-        <div class="card glow-card">
+        <div class="card glow-card fade-up">
           <h3>Scholarship Strategy</h3>
           <p>Understand scholarship tiers, negotiations, and financial planning.</p>
         </div>
+
       </div>
     </div>
   </section>
 
   <!-- ================= VIDEO CARD SECTION ================= -->
-  <section class="section solana-divider-dark section-transition-bottom fade-up">
+  <section class="section solana-divider-dark fade-up">
     <div class="container center">
-      <div class="card glow-card">
+
+      <div class="card glow-card fade-up" style="max-width:900px; margin:auto;">
         <video 
           src="assets/images/futbol-iq-socialmediabranding.mp4"
           controls
@@ -305,14 +316,13 @@
           Social Media Branding for College Recruiting — Full Guide Coming Soon
         </p>
       </div>
+
     </div>
   </section>
 
   <!-- ================= FOOTER ================= -->
-  <footer class="footer fade-up">
-    <div class="container center">
-      © 2026 Futbol IQ Academy. All rights reserved.
-    </div>
+  <footer class="footer">
+    © 2026 Futbol IQ Academy. All rights reserved.
   </footer>
 
   <!-- ================= SCRIPTS ================= -->
